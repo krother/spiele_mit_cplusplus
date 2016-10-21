@@ -6,7 +6,7 @@ const int LEERTASTE = 32;
 
 // SDL starten und Fenster erzeugen
 SDL_Window* fenster_initialisieren() {    
-    //First we need to start up SDL, and make sure it went ok
+    // SDL Starten
     if (SDL_Init(SDL_INIT_VIDEO) != 0){
         std::cout << "SDL_Init Error: " << SDL_GetError() << std::endl;
         return NULL;
@@ -39,7 +39,7 @@ SDL_Surface* kacheln_laden(SDL_Surface *surf) {
 }
 
 
-void blit_tile(SDL_Surface *img, SDL_Surface *surf, int x, int y, int dx, int dy) {
+void blit(SDL_Surface *img, SDL_Surface *surf, int x, int y, int dx, int dy) {
     SDL_Rect srcrect;
     SDL_Rect dstrect;
 
@@ -62,18 +62,17 @@ void event_loop(SDL_Window *win, SDL_Surface *surf, SDL_Surface *img) {
     int x = 4;
     int y = 4;
 
-    blit_tile(img, surf, 3, 0, x, y);
+    blit(img, surf, 3, 0, x, y);
     SDL_UpdateWindowSurface(win);
     while( !quit ) {
         while( SDL_PollEvent( &e ) != 0 ) { 
-            //User requests quit 
+            // Benutzer beendet das Spiel
             if( e.type == SDL_QUIT ) { 
                 quit = true;
             }
-            //User presses a key 
+            // Benutzer drueckt eine Taste
             else if( e.type == SDL_KEYDOWN ) { 
-                blit_tile(img, surf, 5, 1, x, y);
-                //std::cout << e.key.keysym.sym;
+                blit(img, surf, 5, 1, x, y);
                 switch( e.key.keysym.sym ) { 
                     case SDLK_UP: y -= 1; break; 
                     case SDLK_DOWN: y += 1; break; 
@@ -82,7 +81,7 @@ void event_loop(SDL_Window *win, SDL_Surface *surf, SDL_Surface *img) {
                     case LEERTASTE: quit = true; break; 
                     default: std::cout << "nix\n"; break; 
                 }
-                blit_tile(img, surf, 3, 0, x, y);
+                blit(img, surf, 3, 0, x, y);
             }
         }
         SDL_UpdateWindowSurface(win);
@@ -98,7 +97,7 @@ int main(int, char**){
     // Feld fuellen
     for (int i=0; i<20; i++) {
         for (int j=0; j<15; j++) {
-            blit_tile(img, surf, 0, 1, i, j);
+            blit(img, surf, 0, 1, i, j);
         }
     }
 
