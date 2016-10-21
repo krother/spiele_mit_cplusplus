@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="744.09448819"
+   height="1052.3622047"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.4 r9939"
+   sodipodi:docname="uml.svg">
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.4"
+     inkscape:cx="238.42888"
+     inkscape:cy="761.37982"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:object-nodes="true"
+     inkscape:window-width="1301"
+     inkscape:window-height="744"
+     inkscape:window-x="65"
+     inkscape:window-y="24"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:2.81310797"
+       id="rect2985"
+       width="308.43719"
+       height="234.09077"
+       x="147.85715"
+       y="123.07647"
+       inkscape:export-filename="/home/krother/Desktop/c++/Kursmaterialien/uml_punkte.png"
+       inkscape:export-xdpi="150.05936"
+       inkscape:export-ydpi="150.05936" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:2.81310797;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 147.85714,173.31054 308.43719,0"
+       id="path2987"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/krother/Desktop/c++/Kursmaterialien/uml_punkte.png"
+       inkscape:export-xdpi="150.05936"
+       inkscape:export-ydpi="150.05936" />
+    <path
+       inkscape:connector-curvature="0"
+       id="path2989"
+       d="m 147.85714,246.80919 308.43719,0"
+       style="fill:none;stroke:#000000;stroke-width:2.81310797;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       inkscape:export-filename="/home/krother/Desktop/c++/Kursmaterialien/uml_punkte.png"
+       inkscape:export-xdpi="150.05936"
+       inkscape:export-ydpi="150.05936" />
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot2991"
+       style="font-size:10px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       transform="translate(12.142857,9.9999999)"
+       inkscape:export-filename="/home/krother/Desktop/c++/Kursmaterialien/uml_punkte.png"
+       inkscape:export-xdpi="150.05936"
+       inkscape:export-ydpi="150.05936"><flowRegion
+         id="flowRegion2993"><rect
+           id="rect2995"
+           width="410"
+           height="48.57143"
+           x="155.71428"
+           y="125.21932" /></flowRegion><flowPara
+         id="flowPara2997"
+         style="font-size:20px;font-weight:bold">PunkteZaehler</flowPara></flowRoot>    <flowRoot
+       transform="translate(12.142857,67.857143)"
+       style="font-size:10px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       id="flowRoot2999"
+       xml:space="preserve"
+       inkscape:export-filename="/home/krother/Desktop/c++/Kursmaterialien/uml_punkte.png"
+       inkscape:export-xdpi="150.05936"
+       inkscape:export-ydpi="150.05936"><flowRegion
+         id="flowRegion3001"><rect
+           y="125.21932"
+           x="155.71428"
+           height="48.57143"
+           width="410"
+           id="rect3003" /></flowRegion><flowPara
+         style="font-size:20px"
+         id="flowPara3005">-punkte: int</flowPara></flowRoot>    <flowRoot
+       xml:space="preserve"
+       id="flowRoot3007"
+       style="font-size:10px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       transform="translate(12.142857,142.14286)"
+       inkscape:export-filename="/home/krother/Desktop/c++/Kursmaterialien/uml_punkte.png"
+       inkscape:export-xdpi="150.05936"
+       inkscape:export-ydpi="150.05936"><flowRegion
+         id="flowRegion3009"><rect
+           id="rect3011"
+           width="410"
+           height="48.57143"
+           x="155.71428"
+           y="125.21932" /></flowRegion><flowPara
+         id="flowPara3013"
+         style="font-size:20px">+void punkt_fressen()</flowPara><flowPara
+         style="font-size:20px"
+         id="flowPara3015">+int punkte_ausgeben()</flowPara></flowRoot>  </g>
+</svg>

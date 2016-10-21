@@ -1,0 +1,1 @@
+g++ -Wall hello_sdl.cpp -lSDL2 -lSDL2_image -o ./hello_sdl -I/usr/include/SDL2/
