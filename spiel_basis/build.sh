@@ -1,0 +1,1 @@
+g++ -Wall maze.cpp -lSDL2 -lSDL2_image -o ./maze -I/usr/include/SDL2/
