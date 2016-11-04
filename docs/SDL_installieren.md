@@ -1,23 +1,18 @@
 
-SDL unter MinGW C++
+# SDL installieren
 
-nach dem Tutorial von Lazyfoo
-http://lazyfoo.net/tutorials/SDL/01_hello_SDL/windows/mingw/index.php
 
-1. Konsole öffnen
 
-2. MinGW ausprobieren (g++)
+Für einen Großteil des Kurses verwenden wir die Bibliothek **SDL** mit dem Compiler MinGW C++.
+Bevor wir mit den Übungen fortfahren können, müssen wir die Bibliothek installieren. Die Kurzanleitung an dieser Stelle basiert auf dem Tutorial von *Lazyfoo* [http://lazyfoo.net/tutorials/SDL/01_hello_SDL/windows/mingw/index.php](http://lazyfoo.net/tutorials/SDL/01_hello_SDL/windows/mingw/index.php).
 
-3. Ordner mingw_dev_libs erstellen
+1. Öffne eine Konsole mit `cmd`.
+2. Stelle sicher daß **MinGW** installiert ist (`g++` eingeben).
+3. Erstelle einen Ordner `mingw_dev_libs`.
+4. Entpacke die Datei `SDL2_devel..`
+5. Kopiere den Inhalt des Unterordners `i686...32` nach `mingw_dev_libs`
+6. Kopiere die `.dll`-Dateien aus `bin/` dorthin wo das Programm läuft.
+7. Verfahre genauso mit SDL_image (`https://www.libsdl.org/projects/SDL_image/`)
 
-4. SDL herunterladen
-- auspacken
-- Inhalt des i686...32 Unterordners in mingw_dev_libs kopieren
-- DLLs aus bin/ dorthin kopieren wo das Programm läuft
 
-5. mit SDL_image genauso verfahren
-https://www.libsdl.org/projects/SDL_image/
-
-6. Pfade in build.bat prüfen
-
-7. build ausführen
+*(getestet unter MinGW C++)*
