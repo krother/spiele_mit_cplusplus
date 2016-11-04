@@ -1,9 +1,10 @@
 
 # C++ Übersicht
 
-* [Datentypen](datentypen.md)
-* [Operatoren](operatoren.md)
-* [Funktionen](funktionen.md)
-* [Kontrollfluß](kontrollfluss.md)
-* [Die Grafikbibliothek SDL](sdl.md)
-* [Programmierwerkzeuge](programmierwerkzeuge.md)
+* [Datentypen](docs/datentypen.md)
+* [Operatoren](docs/operatoren.md)
+* [Funktionen](docs/funktionen.md)
+* [Kontrollfluß](docs/kontrollfluss.md)
+* [Die Grafikbibliothek SDL](docs/sdl_beispiele.md)
+  * [SDL installieren](docs/sdl_installieren.md)
+* [Programmierwerkzeuge](docs/programmierwerkzeuge.md)

@@ -44,4 +44,17 @@ Eine **Boolean**-Variable definieren und einen Wert zuweisen:
 
     bool fertig = false;
 
+## Arrays
+
+Ein Array ist eine Folge von Elementen des gleichen Typs. Die Länge wird bei der Definition der Variable durch eckige Klammern angezeigt.
+
+    int zahlen[5] = {1, 2, 3, 4, 5};
+
+Es ist möglich, *mehrdimensionale Arrays* zu erzeugen:
+
+   int tabelle[4][4];
+
+Auf die Werte wird widerum mit eckigen Klammern zugegriffen, wobei das erste Element den Index 0 trägt:
+
+   cout << tabelle[2][3] << endl;
 
