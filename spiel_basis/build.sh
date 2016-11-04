@@ -1,1 +1,1 @@
-g++ -Wall maze.cpp -lSDL2 -lSDL2_image -o ./maze -I/usr/include/SDL2/
+g++ -Wall maze.cpp -lSDL2 -lSDL2_image -std=c++11 -o ./maze -I/usr/include/SDL2/

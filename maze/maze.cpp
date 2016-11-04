@@ -7,6 +7,7 @@
 #include "spielfeld.h"
 #include "kachel.h"
 #include "figur.h"
+#include "sdl_app.h"
 //#include "klapptuer.h"
 using namespace std;
 
@@ -19,7 +20,6 @@ Uint32 tuer_zu(Uint32, void*);
 
 
 Uint32 tuer_auf( Uint32 interval, void *param ) {
-  printf("Tür ist auf\n");
   spielfeld[4][4] = '.';
   int *p = NULL;
   SDL_AddTimer( 1000, tuer_zu, p);
@@ -28,7 +28,6 @@ Uint32 tuer_auf( Uint32 interval, void *param ) {
 
 
 Uint32 tuer_zu( Uint32 interval, void *param ) {
-  printf("Tür ist zu\n");
   spielfeld[4][4] = '#';
   int *p = NULL;
   SDL_AddTimer( 1000, tuer_auf, p);
@@ -40,8 +39,7 @@ Uint32 tuer_zu( Uint32 interval, void *param ) {
 class Spieler: public Figur {
   public: Kachel aussehen;
   public: void taste_auswerten(SDL_Event, char[7][7]);
-          void aussehen_ermitteln();
-          
+          void aussehen_ermitteln();          
 };
 
 
@@ -65,61 +63,18 @@ void Geist::zufallsbewegung(char spielfeld[7][7]) {
 
 class Spiel {
   public: bool rattenschwanz;
-          SDL_Window *win;
-  private: void blit_tile(SDL_Surface*, SDL_Surface*, Kachel, int, int);
-  public: SDL_Surface* kacheln_laden(SDL_Surface*);
-          void event_loop(SDL_Window*, SDL_Surface*, SDL_Surface*);
-          void feld_fuellen(SDL_Surface*, SDL_Surface*);
-          Spiel(short, short, short, short);
+          SDL_App *app;
+          void event_loop();
+          void feld_fuellen();
+          Spiel(SDL_App*);
 };
 
 
-Spiel::Spiel(short x, short y, short breite, short hoehe) {
-    // SDL starten und Fenster erzeugen
-    if (SDL_Init(SDL_INIT_VIDEO | SDL_INIT_TIMER) != 0){
-        cout << "SDL_Init Error: " << SDL_GetError() << endl;
-    }
-    win = SDL_CreateWindow("Hello World!", x, y, breite, hoehe, SDL_WINDOW_SHOWN);
 
-    if (win == 0) {
-      cout << "window failed"; 
-    }
+Spiel::Spiel(SDL_App *a) {
+  app = a;
 }
 
-
-// Laden des Bildes mit Spielelementen
-SDL_Surface* Spiel::kacheln_laden(SDL_Surface *surf) {
-    int imgFlags = IMG_INIT_PNG; 
-    if( !( IMG_Init( imgFlags ) & imgFlags ) ) { 
-        cout << "SDL_image could not initialize! SDL_image Error:" << IMG_GetError() << endl; 
-        return NULL;
-    }
-
-    SDL_Surface *xpm = IMG_Load("tiles.png");
-    if (xpm == NULL){
-        cout << "SDL Image Loading Error: " << SDL_GetError() << endl;
-        return NULL;
-    }
-    SDL_Surface *img = SDL_ConvertSurface( xpm, surf->format, 0 );
-    return img;
-}
-
-
-void Spiel::blit_tile(SDL_Surface *img, SDL_Surface *surf, Kachel kachel, int dx, int dy) {
-    SDL_Rect srcrect;
-    SDL_Rect dstrect;
-
-    srcrect.x = kachel.x * 32;
-    srcrect.y = kachel.y * 32;
-    srcrect.w = 32;
-    srcrect.h = 32;
-    dstrect.x = dx * 32;
-    dstrect.y = dy * 32;
-    dstrect.w = 32;
-    dstrect.h = 32;
-
-    SDL_BlitSurface(img, &srcrect, surf, &dstrect);
-}
 
 void Spieler::taste_auswerten(SDL_Event e, char spielfeld[7][7]) {
   switch( e.key.keysym.sym ) { 
@@ -144,7 +99,7 @@ void Spieler::aussehen_ermitteln() {
 
 
 
-void Spiel::event_loop(SDL_Window *win, SDL_Surface *surf, SDL_Surface *img) {
+void Spiel::event_loop() {
     bool quit = false;
     SDL_Event e; 
     Spieler spieler1;
@@ -153,63 +108,64 @@ void Spiel::event_loop(SDL_Window *win, SDL_Surface *surf, SDL_Surface *img) {
     geist.position_setzen(5,5);
 
     int *p = NULL;
-    SDL_AddTimer( 1000, tuer_auf, p);
+    SDL_AddTimer(1000, tuer_auf, p);
 
-    blit_tile(img, surf, kFresserRechts, spieler1.x, spieler1.y);
-    blit_tile(img, surf, kGeist, geist.x, geist.y);
-    SDL_UpdateWindowSurface(win);
+    app->blit(kFresserRechts, spieler1.x, spieler1.y);
+    app->blit(kGeist, geist.x, geist.y);
+    SDL_UpdateWindowSurface(app->win);
+    
     while( !quit ) {
         while( SDL_PollEvent( &e ) != 0 ) { 
-            //User requests quit 
+            // Benutzer beendet das Programm 
             if( e.type == SDL_QUIT ) { 
                 quit = true;
             }
-            //User presses a key 
+            // Benutzer drueckt eine Taste
             else if( e.type == SDL_KEYDOWN ) { 
                 if (rattenschwanz) {
-                  blit_tile(img, surf, kRattenschwanz, spieler1.x, spieler1.y);
+                  app->blit(kRattenschwanz, spieler1.x, spieler1.y);
                 }
                 else {
-                  blit_tile(img, surf, kBoden, spieler1.x, spieler1.y);
+                  app->blit(kBoden, spieler1.x, spieler1.y);
                 }
                 spieler1.taste_auswerten(e, spielfeld);
                 if ( e.key.keysym.sym == LEERTASTE) { 
                     quit = true;
                 }
-                // Spieler zeichnen
-                spieler1.aussehen_ermitteln();
-                blit_tile(img, surf, spieler1.aussehen, spieler1.x, spieler1.y);
-                // Geist zeichnen
-                blit_tile(img, surf, kBoden, geist.x, geist.y);
-                geist.zufallsbewegung(spielfeld);
-                blit_tile(img, surf, kGeist, geist.x, geist.y);
-                // Klapptuer zeichnen
-                if (spielfeld[4][4] == '.') { 
-                  blit_tile(img, surf, kBoden, 4, 4);
-                }
-                else { 
-                  blit_tile(img, surf, kWand, 4, 4);
-                }
             }
         }
-        SDL_UpdateWindowSurface(win);
+        // Spieler zeichnen
+        spieler1.aussehen_ermitteln();
+        app->blit(spieler1.aussehen, spieler1.x, spieler1.y);
+        // Geist zeichnen
+        app->blit(kBoden, geist.x, geist.y);
+        geist.zufallsbewegung(spielfeld);
+        app->blit(kGeist, geist.x, geist.y);
+        // Klapptuer zeichnen
+        if (spielfeld[4][4] == '.') { 
+          app->blit(kBoden, 4, 4);
+        }
+        else { 
+          app->blit(kWand, 4, 4);
+        }
+        SDL_UpdateWindowSurface(app->win);
+        SDL_Delay(200);
     }  
 }
 
 
 
-void Spiel::feld_fuellen(SDL_Surface *img, SDL_Surface *surf) {
-    // Feld fuellen
+void Spiel::feld_fuellen() {
     for (int x=0; x<7; x++) {
         for (int y=0; y<7; y++) {
             if (spielfeld[y][x] == '#') {
-                blit_tile(img, surf, kWand, x, y);
+                app->blit(kWand, x, y);
             }
             else if (spielfeld[y][x] == '.') {
-                blit_tile(img, surf, kBoden, x, y);
+                app->blit(kBoden, x, y);
             }
             else if (spielfeld[y][x] == '*') {
-                blit_tile(img, surf, kPunkt, x, y);
+                app->blit(kPunkt, x, y);
             }
         }
     }
@@ -218,24 +174,15 @@ void Spiel::feld_fuellen(SDL_Surface *img, SDL_Surface *surf) {
 int main(int, char**){
     srand(time(NULL));
 
-    Spiel spiel(100, 100, 640, 480);
+    SDL_App app(100, 100, 640, 480);
+    Spiel spiel(&app);
 
-    SDL_Surface *surf = SDL_GetWindowSurface(spiel.win);
-    SDL_Surface *img = spiel.kacheln_laden(surf);
+    spiel.rattenschwanz = false; 
+    spiel.feld_fuellen();
+    spiel.event_loop();
 
-    // Nachricht ausgeben
-    //SDL_ShowSimpleMessageBox(SDL_MESSAGEBOX_INFORMATION,
-    //         "Fenstertitel", "Hello World.", NULL);
-
-    spiel.rattenschwanz = false;
- 
-    spiel.feld_fuellen(img, surf);
-    spiel.event_loop(spiel.win, surf, img); 
-	SDL_DestroyWindow(spiel.win);
-
- 	SDL_Quit();
-	
-	return 0;
+    app.destroy();
+	  return 0;
 }
 
 

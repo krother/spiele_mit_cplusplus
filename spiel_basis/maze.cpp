@@ -40,19 +40,9 @@ SDL_Surface* kacheln_laden(SDL_Surface *surf) {
 
 
 void blit(SDL_Surface *img, SDL_Surface *surf, int x, int y, int dx, int dy) {
-    SDL_Rect srcrect;
-    SDL_Rect dstrect;
-
-    srcrect.x = x * 32;
-    srcrect.y = y * 32;
-    srcrect.w = 32;
-    srcrect.h = 32;
-    dstrect.x = dx * 32;
-    dstrect.y = dy * 32;
-    dstrect.w = 32;
-    dstrect.h = 32;
-
-    SDL_BlitSurface(img, &srcrect, surf, &dstrect);
+    SDL_Rect source{x: x*32, y: y*32, w:32, h:32};
+    SDL_Rect destination{x: dx*32, y: dy*32, w:32, h:32};
+    SDL_BlitSurface(img, &source, surf, &destination);
 }
 
 
