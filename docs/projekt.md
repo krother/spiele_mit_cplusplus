@@ -53,16 +53,16 @@ Einige Grafikelemente
 
 ![](spielszenen/tiles.png)
 
-![](spielszenen/raumschiffe.xpm)
+![](spielszenen/raumschiffe.png)
 
 Aus **Bub n Bros**
 
-![](spielszenen/fruit.xpm)
+![](spielszenen/fruit.png)
 
-![](spielszenen/cream_pie_big.ppm  
+![](spielszenen/cream_pie_big.png 
 
 Elemente aus **Freeciv**
 
-![](spielszenen/tiles.xpm)
+![](spielszenen/civtiles.png)
 
-![](spielszenen/flags.xpm)
+![](spielszenen/flags.png)
