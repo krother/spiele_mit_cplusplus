@@ -8,3 +8,4 @@
 * [Die Grafikbibliothek SDL](docs/SDL_beispiele.md)
   * [SDL installieren](docs/SDL_installieren.md)
 * [Programmierwerkzeuge](docs/programmierwerkzeuge.md)
+* [Die Projektskizze](docs/projekt.md)
