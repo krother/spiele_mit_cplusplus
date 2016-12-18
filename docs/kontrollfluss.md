@@ -81,3 +81,6 @@ Der Ausdruck in der runden Klammer beim `for` bedeutet folgendes:
 2. Die Schleife soll so lange laufen, wie `i` kleiner als 10 ist.
 3. Nach jedem Schleifendurchlauf, erhöhe `i` um 1. (Der Operator `++` tut das gleiche wie `i=i+1`)
 
+## Verzweigungen mit `switch`
+
+*kommt noch*

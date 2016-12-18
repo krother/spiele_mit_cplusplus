@@ -58,3 +58,14 @@ Auf die Werte wird widerum mit eckigen Klammern zugegriffen, wobei das erste Ele
 
    cout << tabelle[2][3] << endl;
 
+## Strings
+
+*kommt noch*
+
+## enums
+
+*kommt noch*
+
+## Vektoren
+
+*kommt noch*
