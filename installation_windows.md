@@ -20,7 +20,7 @@ Führe das Programm `g++` aus. Wenn Du die folgende Fehlermeldung siehst, hat al
     g++: fatal error: no input files
     compilation terminated.
 
-**Gratuliere!** Damit hast Du theoretisch alles was Du benötigst. Allerdings werden wir noch ein paar weiter Programme installieren, um uns die Arbeit bequemer zu machen.
+**Gratuliere!** Damit hast Du theoretisch alles was Du benötigst. Allerdings werden wir noch ein paar weitere Programme installieren, um uns die Arbeit bequemer zu machen.
 
 
 ## Schritt 2: Pfad auf MinGW setzen
