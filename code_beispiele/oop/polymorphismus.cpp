@@ -34,14 +34,37 @@ class Hund: public Tier {
       }
 };
 
+class Biene: public Tier {
+  public:
+      bool honig;
+      Biene(bool h) : Tier("Biene", 6) {
+           honig = h;
+      }
+
+      void summen() {
+          cout << "bsss ... bsss ... bsss" << endl;
+      }
+
+      virtual void ausgeben() {
+          Tier::ausgeben();
+          if (honig) {
+              cout << "Honig geladen!" << endl;
+          }
+      }
+};
+
 
 int main() {
-
   Hund rex("Rex");
+  Biene maja(true);
 
   rex.ausgeben();
   rex.bellen();
+  maja.ausgeben();
+  maja.summen();
 
 }
+
+
 
 
