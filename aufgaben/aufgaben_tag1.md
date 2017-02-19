@@ -38,8 +38,17 @@ Für die folgenden Aufgaben kann das Material unter [www.cpp-tutor.de](http://ww
 
 ### Aufgabe 2.2
 
-* Recherchiere welche anderen einfachen(!) Datentypen es in C++ gibt.
-* Erstellt gemeinsam eine Tabelle an der Tafel mit den Datentypen und was diese beinhalten können.
+Recherchiere nach anderen einfachen Datentypen in C++. 
+Befüllt gemeinsam die folgende Tabelle.
+
+| Datentyp | Bedeutung |
+|----------|-----------|
+| int      | ganze Zahlen |
+| char     |              |
+| bool     |              |
+| float    |              |
+| double   |              |
+
 
 ## 3. Ein- und Ausgabe
 

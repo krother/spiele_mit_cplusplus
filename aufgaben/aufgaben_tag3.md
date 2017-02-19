@@ -19,7 +19,7 @@ Erkläre das Codebeispiel `new.cpp`
 
 ### Aufgabe 2.2 
 
-Zähle auf, in welcher Reihenfolge was beim Erstellen und vernichten eines Objekts passiert.
+Zähle auf, in welcher Reihenfolge was beim Erstellen und Vernichten eines Objekts passiert.
 
 ## 3. Statische Eigenschaften
 

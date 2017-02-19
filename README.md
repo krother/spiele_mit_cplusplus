@@ -1,31 +1,47 @@
 
 # Spiele mit C++ programmieren
 
-**Ein Kurs in objektorientierter Programmierung**
-
 **(c) 2016 Dr. Kristian Rother**
 
 ## Ziel dieses Kurses
 
-Objektorientierte Programmierung mit C++ lernen, indem ein Computerspiel programmiert wird.
+In diesem Kurs lernst Du die Grundlagen von C++ lernen, indem Du kleine Computerspiele programmierst.
 
 ![Pac - Spielszene](images/pac.png)
 
 ## Voraussetzungen
 
-* Programmierkenntnisse sind hilfreich, aber nicht erforderlich.
-* Ein C++ - Compiler
-* Ein PC mit Windows, Linux oder MacOS
+* keine Vorkenntnisse erforderlich.
+
+## Installation (Windows)
+
+* C++-Compiler (MinGW)
+* Java Development Kit
+* Eclipse
+* Notepad++
+
+## Installation (Linux)
+
+* C++-Compiler GCC
+* ein Texteditor (z.B. Sublime2)
 
 ----
 
 ## Links
+
+### e-Book zum Kurs
+
+[www.gitbook.com/book/krother/objektorientierte-programmierung-mit-c/details](https://www.gitbook.com/book/krother/objektorientierte-programmierung-mit-c/details)
 
 ### C++ Tutor
 
 Nachschlagwerk in deutscher Sprache:
 
 [www.cpp-tutor.de](http://www.cpp-tutor.de)
+
+### Offizielle C++-Webseite
+
+[www.cplusplus.com/](http://www.cplusplus.com/)
 
 ### C++ Programmierung
 
