@@ -1,33 +1,5 @@
 
-# Aufgaben Tag 10
-
-## 1. Strings
-
-### 1.1 Programm ausführen
-
-Führe das Programm `string.cpp` aus. Erkläre den Code.
-
-### 1.2 Die Dokumentation verwenden
-
-Lies in der Dokumentation unter [www.cplusplus.com/reference/string/string/](http://www.cplusplus.com/reference/string/string/) nach, welche weiteren Funktionen es gibt.
-
-Probiere 2 davon aus.
-
-
-## 2. Vektoren
-
-### 2.1 Programm ausführen
-
-Führe das Programm `vektoren.cpp` aus. Erkläre den Code.
-
-### 2.2 Element aus einem Vektor löschen.
-
-Finde heraus, wie Du das letzte Element eines Vektors löschen kannst. Implementiere dies in einem Programm und gib den entsprechenden Vektor aus.
-
-Siehe [www.cplusplus.com/reference/vector/vector/](http://www.cplusplus.com/reference/vector/vector/) 
-
-
-## 3. Klassen
+# Projekt: "Raumschiffe"
 
 ### 3.1 Programm ausführen
 

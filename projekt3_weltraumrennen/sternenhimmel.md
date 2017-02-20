@@ -1,5 +1,5 @@
 
-# Aufgaben Tag 6
+# Das Raumschiffspiel
 
 ## Ziel
 
@@ -52,34 +52,8 @@ Sorge dafür, daß sich das Raumschiff mit *Pfeil oben* nach oben bewegt. Setze 
 
 ### 2.5 Switch
 
-Betrachte das Beispiel im Ordner `Switch`. Verwende `switch`, um das Beispiel
+Betrachte das Beispiel im Ordner `Switch`. Verwende `switch`, um die Pfeiltasten den Bewegungen zuzuordnen.
 
 ### 2.6 Beschleunigung
 
 Ändere das Programm, so daß die Pfeiltasten die *Geschwindigkeit* des Raumschiffs ändern.
-
-
-## 3. Textausgabe in SDL
-
-### 3.1 SDL-ttf installieren
-
-* Entpacke die include- und .dll-Dateien der Bibliothek **SDL2_ttf**.
-* Kopiere die inlcude-Dateien zu den übrigen SDL-Bibliotheken.
-* füge im Skript `build.bat` die Option `-lSDL2_ttf` hinzu.
-
-### 3.2 Text auf den Bildschirm schreiben
-
-Compiliere das Programm `text.cpp` und führe es aus.
-
-
-## 4. Klassen
-
-### 4.1 Eine Klasse verwenden
-
-Führe das Programm im Ordner `Klassen` aus und verstehe was es tut.
-
-### 4.2 Eine Klasse entwickeln
-
-Entwerfe eine Klasse für das Raumschiff und baue sie in das bestehende Programm ein.
-
-

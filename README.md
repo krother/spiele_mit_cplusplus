@@ -29,9 +29,13 @@ In diesem Kurs lernst Du die Grundlagen von C++ lernen, indem Du kleine Computer
 
 ## Links
 
-### e-Book zum Kurs
+### Online-Skript zum Kurs
 
 [www.gitbook.com/book/krother/objektorientierte-programmierung-mit-c/details](https://www.gitbook.com/book/krother/objektorientierte-programmierung-mit-c/details)
+
+weitere Skripten:
+
+[https://www.gitbook.com/@krother](https://www.gitbook.com/@krother)
 
 ### C++ Tutor
 

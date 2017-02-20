@@ -64,7 +64,13 @@ In `if`-Ausdrücken ist es manchmal hilfreich, mehrere Vergleiche zu verknüpfen
 Beispiel:
 
     if ((monat >= 1) && (monat <= 12) {
-    	cout << "Diesen Monat gibt es wirklich";
+        cout << "Diesen Monat gibt es wirklich";
+    }
+    if ((monat < 1) || (monat > 12) {
+    	cout << "Diesen Monat gibt es gar nicht!";
+    }
+    if (!monat == 12) {
+        cout << "In diesem Monat ist nicht Weihnachten";
     }
 
 ### Schiebeoperatoren
@@ -73,7 +79,7 @@ Der Schiebeoperator `<<` wird für die Ausgabe mittels `cout` verwendet.
 
 Der Schiebeoperator `>>` wird für die Eingabe mittels `cin` verwendet.
 
-Die Schiebeoperatoren lassen sich auch für Binärarithmetik einsetzen, das ist aber etwas für fortgeschrittene C-Programmierer.
+Die Schiebeoperatoren lassen sich auch für Binärarithmetik einsetzen, z.B. Verdoppeln und Halbieren von Zahlen. Das ist aber etwas für fortgeschrittene C-Programmierer.
 
 
 ### Zeigeroperatoren (* und &)
@@ -84,4 +90,5 @@ Ein `*` nach einem Variablentyp steht für einen sogenannten *Zeiger* (eine Spei
 
 Der Operator `&` liefert die Speicheradresse einer beliebigen Variablen, wandelt sie also in einen Zeiger um.
 
-Wir werden Zeiger im Kurs nicht im Detail behandeln, es genügt zu wissen daß es sich um einen Zeiger handelt.
+Wir werden Zeiger im Kurs nicht im Detail behandeln, es genügt zu wissen daß es sich um einen Zeiger handelt, sobald Ihr `*` und `&` seht.
+

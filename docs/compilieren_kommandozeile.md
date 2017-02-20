@@ -1,8 +1,6 @@
 
 # Compilieren auf der Kommandozeile
 
-**Schwierigkeit: LEICHT**
-
 ## Ziel
 
 Compiliere ein C++-Programm, indem Du den Compiler direkt aufrufst.
@@ -25,7 +23,6 @@ Compiliere ein C++-Programm, indem Du den Compiler direkt aufrufst.
 
     g++ hello.cpp -o hello
 
-
 7. Welche Datei ist entstanden?
 
 8. Rufe die Datei auf, indem Du in der Konsole `dateiname.exe` eingibst. 
@@ -46,5 +43,4 @@ Nun werden wir den Prozeß wiederholen, aber uns die Arbeit etwas bequemer mache
 5. Klicke `hello.bat` an.
 
 6. Prüfe ob ein ausführbares Programm entstanden ist.
-
 

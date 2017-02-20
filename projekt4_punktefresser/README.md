@@ -272,3 +272,12 @@ Lagere das Spielfeld in eine eigene Datei `spielfeld.h` aus.
 * Verschiebe die Definition des Spielfelds in eine neue Datei `spielfeld.h`
 * Binde diese Datei mit `#include <spielfeld.h>` in Dein Programm ein.
 * Compiliere das Programm und führe es aus.
+
+
+# C++ - Tag 2
+
+## Tagesziel
+
+Ein Level für ein Spiel mit kachelbasierter Grafik auf dem Bildschirm darstellen.
+
+![ein kachelbasiertes Spiel](06_projektskizze/bilder/fruit.png)

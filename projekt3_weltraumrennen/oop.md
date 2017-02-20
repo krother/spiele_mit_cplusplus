@@ -1,6 +1,32 @@
 
 # Tag 2: Wie entwickelt man Klassen?
 
+# Was ist OOP?
+
+
+## 7. Ein einfaches objektorientiertes Programm
+
+### Aufgabe 7.1
+
+* Führe das Programm `rect.cpp` aus. 
+* Klärt gemeinsam was der Quelltext tut.
+
+### Aufgabe 7.2
+
+Klärt gemeinsam folgende Begriffe:
+
+* Klasse
+* Instanz
+* Objektinstanzierung
+* Variablendefinition
+* Eigenschaft
+* Methode
+
+### Aufgabe 7.3
+
+* Welche Vor- und Nachteile hat objektorientierte Programmierung.
+
+
 ## Kapselung
 
 ### Aufgabe 1.1
