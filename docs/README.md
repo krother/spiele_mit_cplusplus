@@ -6,6 +6,10 @@
 
 **von Ariane Wilke**
 
+![Kisten schieben](kisten_schieben/kisten_schieben2.png)
+
+[Code und Beschreibung zum Spiel](kisten_schieben/kisten_schieben.md)
+
 ### Ameisenspiel
 
 (wartet auf Autorenfreigabe)
