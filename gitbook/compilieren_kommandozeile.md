@@ -21,11 +21,26 @@ Compiliere ein C++-Programm, indem Du den Compiler direkt aufrufst.
 
 6. Rufe den Compiler auf, indem Du eingibst:
 
-    g++ hello.cpp -o hello
+    g++ hello.cpp -o hello.exe
 
 7. Welche Datei ist entstanden?
 
 8. Rufe die Datei auf, indem Du in der Konsole `dateiname.exe` eingibst. 
+
+## Compilieren unter Linux und Mac
+
+Grundsätzlich funktioniert das Kompilieren genauso, außer daß:
+
+1. Suche nach **Terminal** um eine Konsole zu öffnen
+2. Es gibt beim `cd`-Befehl keine Verzeichnisse mit `C:` usw.
+3. Der Befehl `dir` heißt `ls`
+4. Um ein compiliertes Programm auszuführen mußt Du eingeben z.B.:
+
+    ./hello.exe
+
+Oder wenn Du keinen Namen der Ausgabedatei angibst:
+
+    ./a.out
 
 
 ## Zusatzaufgabe

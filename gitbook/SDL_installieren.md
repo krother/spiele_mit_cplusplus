@@ -14,3 +14,7 @@ Bevor wir mit den Übungen fortfahren können, müssen wir die Bibliothek instal
 
 
 *(getestet unter MinGW C++)*
+
+## SDL2 unter Mac installieren
+
+Es gibt eine sehr schöne Anleitung von LazyFoo zum Installieren von SDL2 unter dem Mac-Editor **xcode**: [http://lazyfoo.net/tutorials/SDL/01_hello_SDL/mac/xcode/index.php](http://lazyfoo.net/tutorials/SDL/01_hello_SDL/mac/xcode/index.php)
