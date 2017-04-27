@@ -18,7 +18,7 @@ Uns stehen Bilder mit 1-6 Würfelaugen zur Verfügung.
 ### Infomaterialien
 
 * SDL unter Eclipse installieren
-* Beispiel für die SDL-Bibliothek
+* Erste Schritte mit SDL
 
 ### Für Fortgeschrittene
 
