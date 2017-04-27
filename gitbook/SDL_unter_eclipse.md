@@ -1,12 +1,12 @@
 
 # SDL-Programme unter Eclipse compilieren
 
-Compiliere das Programm `mauszeiger.cpp` unter Eclipse. Führe dazu die folgenden Schritte durch:
+Um die Bibliothek SDL in einem Eclipse-Projekt zu verwenden, führe die folgenden Schritte durch:
 
 1. Starte Eclipse
 2. Lege ein neues MinGW-C++ Projekt an
 3. Erstelle eine neue C++-Datei (Source File)
-4. Kopiere den Inhalt aus `mauszeiger.cpp` in die neue Datei
+4. Schreibe den Quelltext in die neue Datei
 5. Sage Eclipse, wo die Header-Dateien zu finden sind:
 
     füge im Dialog:

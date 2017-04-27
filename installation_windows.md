@@ -61,8 +61,3 @@ Erstelle in Eclipse ein **"C++ Hello World Project"** für MinGW. Kompiliere das
 
 Falls die Option *"Eclipse für C++"* bei Schritt 4 nicht erscheint, suche im Internet nach **Eclipse CDT**.
 
-
-## Schritt 4: SDL konfigurieren
-
-In diesem Schritt werden wir SDL-Programme unter Eclipse zum Laufen bringen.
-
