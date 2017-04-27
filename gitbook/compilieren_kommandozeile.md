@@ -1,9 +1,7 @@
 
 # Compilieren auf der Kommandozeile
 
-## Ziel
-
-Compiliere ein C++-Programm, indem Du den Compiler direkt aufrufst.
+Wir können ein C++-Programm auch ohne Eclipse compilieren. Das hilft, den Prozeß genauer zu verstehen. Wir rufen dazu den Compiler direkt von der **Kommandozeile** aus.
 
 ## Arbeitsschritte
 

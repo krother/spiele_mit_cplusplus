@@ -1,6 +1,8 @@
 
 # Datentypen
 
+C++ kennt eine große Zahl von Datentypen. Hier werden die *einfachen* Datentypen vorgestellt.
+
 ## Integer
 
 Der Datentyp **Integer** (`int`) bezeichnet ganze Zahlen.
@@ -44,38 +46,6 @@ Eine **Boolean**-Variable definieren und einen Wert zuweisen:
 
     bool fertig = false;
 
-## Arrays
-
-Ein Array ist eine Folge von Elementen des gleichen Typs. Die Länge wird bei der Definition der Variable durch eckige Klammern angezeigt.
-
-    int zahlen[5] = {1, 2, 3, 4, 5};
-
-Es ist möglich, *mehrdimensionale Arrays* zu erzeugen:
-
-   int tabelle[4][4];
-
-Auf die Werte wird widerum mit eckigen Klammern zugegriffen, wobei das erste Element den Index 0 trägt:
-
-   cout << tabelle[2][3] << endl;
-
-## Vektoren
-
-Vektoren sind Listen mit einem *Datentyp* und *variabler Länge*. Vektoren lassen sich mit doppelten geschweiften Klammern definieren:
-
-    vector<int> liste {{1, 2, 3, 5, 7}};
-
-Über die Funktion `size()` läßt sich die Anzahl der Elemente eines Vektors bestimmen:
-
-    for (unsigned int i=0; i < liste.size(); i++) {
-        cout << liste[i] << endl;
-    }
-
-Mit der Funktion `push_back(element)` lassen sich Elemente am Ende des Vektors anhängen:
- 
-    liste.push_back(13);
-
-Weitere Funktionen und Details siehe unter [www.cplusplus.com/reference/vector/vector/](http://www.cplusplus.com/reference/vector/vector/) 
-
 ## Strings
 
 Der Datentyp `string` ist eine Kette von Buchstaben und anderen Zeichen. Strings werden mit Anführungszeichen definiert:
@@ -95,8 +65,4 @@ Strings verfügen über Funktionen, mit denen sie sich analysieren und veränder
 
 
 Weitere Funktionen und Details siehe unter [www.cplusplus.com/reference/string/string/](http://www.cplusplus.com/reference/string/string/) 
-
-## enums
-
-*kommt noch*
 

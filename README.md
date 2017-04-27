@@ -71,4 +71,3 @@ Einführungsbuch von Benjamin Buch (unter CC-Lizenz):
 ## Lizenz
 
 Sämtliche Materialien in diesem Kurs sind unter den Bedingungen der MIT License verfügbar.
-
