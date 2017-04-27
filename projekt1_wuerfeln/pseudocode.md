@@ -27,7 +27,7 @@ In diesem Spiel versuchen wir, mit fünf Würfeln die gleiche Zahl zu würfeln. 
     D : 4
     E : 1
 
-## Pseudocode
+### Pseudocode
 
 Bevor Du irgend etwas programmierst, notiere die Schritte, die das Programm durchführen muß untereinander in Stichpunkten auf. 
 

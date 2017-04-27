@@ -10,10 +10,10 @@ Damit es etwas aufregender wird, werden wir drei Würfel werfen. Dabei versuchen
 * Die Anzahl der verbleibenden Versuche wird ebenfalls ausgegeben.
 * Am Ende wird die Summe der Würfel ausgegeben.
 
+### Infomaterialien
 
-## Arrays
+* Arrays
 
-### Aufgabe 1.5.1
+### Für Fortgeschrittene
 
-Erstelle ein array (Feld) mit Quadratzahlen `[1, 4, 9, 16, ...]`.
-
+Erweitere das Programm von drei auf 10, dann auf 100 Würfel.
