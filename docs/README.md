@@ -8,7 +8,7 @@
 
 ![Kisten schieben](kisten_schieben/kisten_schieben2.png)
 
-[Code und Beschreibung zum Spiel](kisten_schieben/kisten_schieben.md)
+[Code und Beschreibung zum Spiel](kisten_schieben/README.md)
 
 ### Ameisenspiel
 
