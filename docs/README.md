@@ -10,6 +10,18 @@
 
 [Code und Beschreibung zum Spiel](kisten_schieben/README.md)
 
+----
+
+### Vier Gewinnt
+
+**von Natalia Neumeister und Nikola Nikolov**
+
+![Vier gewinnt](vier_gewinnt/vier_gewinnt.png)
+
+[Code und Beschreibung zum Spiel](vier_gewinnt/README.md)
+
+----
+
 ### Ameisenspiel
 
 (wartet auf Autorenfreigabe)
@@ -31,10 +43,6 @@
 (wartet auf Autorenfreigabe)
 
 ### TrumpSnake
-
-(wartet auf Autorenfreigabe)
-
-### Vier Gewinnt
 
 (wartet auf Autorenfreigabe)
 
