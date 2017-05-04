@@ -22,4 +22,22 @@ Uns stehen Bilder mit 1-6 Würfelaugen zur Verfügung.
 
 ### Für Fortgeschrittene
 
+#### 1. Zahlenraten:
+
 Erweitere das Programm, so daß das Zahlenraten mit mehreren Versuchen eine grafische Ausgabe bekommt.
+
+#### 2. Klasse:
+
+* Schreibe eine Klasse in C++ (Codebeispiele im Ordner), die für das Erstellen des Fensters verantwortlich ist.
+* Erstelle eine Instanz dieser Klasse und baue sie ins Programm ein.
+* Erkläre der Gruppe anhand eines einfachen Beispielprogramms die Begriffe **Klasse** und **Objekt**.
+
+#### 3. Objektorientierte Entwicklung
+
+Teilt folgende Begriffe untereinander auf:
+
+* [CRC-Karten](http://www.academis.eu/posts/crc_cards)
+* [UML-Klassendiagramm](https://sourcemaking.com/uml/modeling-it-systems/structural-view/class-diagram)
+* [Singleton](https://sourcemaking.com/design_patterns/singleton)
+
+Recherchiert diese Techniken und wendet sie nach Möglichkeit auf Euer Programm an. Diskutiert untereinander Vor- und Nachteile der einzelnen Techniken.

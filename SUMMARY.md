@@ -10,7 +10,9 @@
   * [Drei Würfel werfen](projekt1_wuerfeln/drei_wuerfel.md)
   * [Würfel zeichnen](projekt1_wuerfeln/wuerfel_zeichnen.md)
   * [Der Fünferpasch](projekt1_wuerfeln/pseudocode.md)
-* [Projekt 2: Adventure](projekt2_flucht_aus_dem_tempel/README.md)
+* [Projekt 2: Finde das Drachenei](projekt2_finde_das_drachenei/README.md)
+  * [Von Raum zu Raum](projekt2_finde_das_drachenei/raum_zu_raum.md)
+  * [Landschaftsbilder](projekt2_finde_das_drachenei/landschaftsbilder.md)
 * [Projekt 3: Weltraumrennen](projekt3_weltraumrennen/README.md)
 * [Projekt 4: Punktefresser](projekt4_punktefresser/README.md)
 * [C++ Grundlagen]

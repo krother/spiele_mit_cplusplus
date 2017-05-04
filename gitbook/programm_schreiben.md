@@ -12,10 +12,9 @@ Um ein Programm in C++ zu schreiben, sind 3 Schritte notwendig
 
 ### Schritt 2: Quelltext schreiben
 
-* Erstelle eine neue C++-Datei mit dem Namen `hallo.cpp`.
-* Gib folgenden Programmcode ein:
+Erstelle eine neue C++-Datei mit dem Namen `hallo.cpp`. Gib darin folgenden Programmcode ein:
 
-    &#35;include &lt;iostream&gt;
+    #include <iostream>
     using namespace std;
 
     int main() {
@@ -23,7 +22,7 @@ Um ein Programm in C++ zu schreiben, sind 3 Schritte notwendig
         return 0;
     }
 
-* speichere die Datei.
+Speichere die Datei anschließend ab.
 
 ### Schritt 3: Compilieren
 
