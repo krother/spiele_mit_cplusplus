@@ -9,7 +9,7 @@ Zum Glück müssen wir die Bilder nicht selbst zeichnen, zum Projekt gehört ein
 
 * Die Navigation funktioniert wie im textbasierten Programm.
 * Zu jedem Raum wird ein Bild angezeigt.
-* verwende die 
+* verwende die mitgelieferten Landschaftsbilder
 
 ### Beispielausgabe
 
