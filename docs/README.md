@@ -20,6 +20,7 @@
 
 [Code und Beschreibung zum Spiel](vier_gewinnt/README.md)
 
+<!--
 ----
 
 ### Ameisenspiel
@@ -46,6 +47,7 @@
 
 (wartet auf Autorenfreigabe)
 
+!-->
 
 ## Lizenzbedingungen
 
