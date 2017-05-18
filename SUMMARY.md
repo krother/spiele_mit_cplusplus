@@ -13,6 +13,8 @@
 * [Projekt 2: Finde das Drachenei](projekt2_finde_das_drachenei/README.md)
   * [Von Raum zu Raum](projekt2_finde_das_drachenei/raum_zu_raum.md)
   * [Landschaftsbilder](projekt2_finde_das_drachenei/landschaftsbilder.md)
+  * [Schnelle Steuerung](projekt2_finde_das_drachenei/schnelle_steuerung.md)
+  * [Der Magier und die Kiste](projekt2_finde_das_drachenei/magier_und_kiste.md)
 * [Projekt 3: Weltraumrennen](projekt3_weltraumrennen/README.md)
 * [Projekt 4: Punktefresser](projekt4_punktefresser/README.md)
 * [C++ Grundlagen]
@@ -31,6 +33,7 @@
   * [SDL unter Eclipse installieren](gitbook/SDL_unter_eclipse.md)
   * [SDL auf der Kommandozeile installieren](gitbook/SDL_installieren.md)
   * [Erste Schritte mit SDL](gitbook/SDL_erste_schritte.md)
+  * [Events in SDL](gitbook/SDL_events.md)
   * [Textausgabe unter SDL](gitbook/SDL_textausgabe.md)
   * [Vollbildmodus unter SDL](gitbook/SDL_vollbild.md)
 * [Programmierwerkzeuge](gitbook/programmierwerkzeuge.md)

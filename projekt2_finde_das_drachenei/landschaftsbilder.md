@@ -17,12 +17,11 @@ Zum Glück müssen wir die Bilder nicht selbst zeichnen, zum Projekt gehört ein
 
 ### Infomaterialien
 
+* Codebeispiele SDL
 
 
 ### Für Fortgeschrittene
 
-* Implementiere eine Klasse `Raum`. 
+Lagere das Initialisieren der Grafik (Fenster öffnen, Bilder laden, zeichnen) in eine eigene Klasse aus. 
 
-bereite Dich darauf vor, den anderen Kursteilnehmern an einem einfachen Codebeispiel eines der folgenden Themen innerhalb von 7 Minuten zu erklären:
-
-* was eine Klasse ist.
+Informiere Dich, was das Entwurfsmuster **Singleton** ist (auf [www.sourcemaking.com](www.sourcemaking.com)). Diskutiere, ob das Muster hier sinnvoll einsetzbar ist oder was für Alternativen in Betracht kommen.

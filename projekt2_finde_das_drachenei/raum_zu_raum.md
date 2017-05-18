@@ -49,5 +49,6 @@ Wir setzen die erste Spielversion vollständig textbasiert um.
 
 bereite Dich darauf vor, den anderen Kursteilnehmern an einem einfachen Codebeispiel eines der folgenden Themen innerhalb von 7 Minuten zu erklären:
 
+* was eine Funktion ist.
 * was eine Klasse ist.
 * was der Unterschied zwischen einem Array und einem Vektor ist
