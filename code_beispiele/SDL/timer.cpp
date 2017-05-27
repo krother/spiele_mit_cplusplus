@@ -16,7 +16,7 @@ Uint32 callback( Uint32 interval, void *param ) {
 }
 
 
-int main() {
+int main(int, char **) {
   SDL_Init(SDL_INIT_VIDEO | SDL_INIT_TIMER);
 
   int *p = NULL;

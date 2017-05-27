@@ -8,7 +8,7 @@ using namespace std;
 const int LEERTASTE = 32;
 
 // SDL starten und Fenster erzeugen
-int main() {
+int main(int, char **) {
     SDL_Init(SDL_INIT_VIDEO);
     SDL_Window *win = SDL_CreateWindow("Hello World!", 100, 100, 300, 300, SDL_WINDOW_SHOWN);
     SDL_Event e;

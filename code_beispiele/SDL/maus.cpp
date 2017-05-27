@@ -4,7 +4,7 @@
 #include <SDL.h>
 
 
-int main(int argc, char *argv[])
+int main(int int, char **)
 {
     SDL_Event event;
 

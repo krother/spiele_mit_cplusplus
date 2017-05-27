@@ -2,7 +2,7 @@
 #include <iostream>
 using namespace std;
 
-int main() {
+int main(int, char **) {
 
 	SDL_Rect a = {x: 10, y:10, w:10, h:10};
 	SDL_Rect b = {x: 20, y:20, w:10, h:10};

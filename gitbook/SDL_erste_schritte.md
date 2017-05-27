@@ -21,13 +21,17 @@ Um ein Bild namens `fruechte.png` zu laden:
     
 
 ### Ein ganzes Bild kopieren
-   
-    SDL_BlitSurface(img, NULL, surf, NULL);
+
+Um das Bild aus dem vorigen Beispiel dann auch darzustellen, reicht eine Zeile:
+
+    SDL_BlitSurface(png, NULL, surf, NULL);
 
 ### Einen rechteckigen Bildbereich kopieren
 
-    SDL_Rect source{x: x*32, y: y*32, w:32, h:32};
-    SDL_Rect destination{x: dx*32, y: dy*32, w:32, h:32};
+Die Funktion `SDL_BlitSurface` kopiert einen rechteckingen Bereich aus einem Bild in den Bildschirmspeicher. Über die zwei Rechtecke (hier beide als `struct`) können wir den zu kopierenden Ausschnitt festlegen, sowie das Zielrechteck im Bildschirmspeicher.
+
+    SDL_Rect source{x: 0, y: 0, w:400, h:100};
+    SDL_Rect destination{x: 50, y: 50, w:200, h:200};
     SDL_BlitSurface(img, &source, surf, &destination);
 
 ### Das Fenster aktualisieren
