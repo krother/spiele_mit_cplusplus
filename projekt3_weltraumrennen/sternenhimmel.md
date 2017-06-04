@@ -23,7 +23,7 @@ Stelle auch die anderen beiden Sternbilder (`stars2.png` und `stars3.png`) dar.
 
 ### 1.4 Parallax-Effekt
 
-Sorge dafür, daß sich die drei Sternbilder mit unterschiedlichen Geschwindigkeiten bewegen. Gib der Eben mit den kleinsten Sternen die langsamste Geschwindigkeit.
+Sorge dafür, daß sich die drei Sternbilder mit unterschiedlichen Geschwindigkeiten bewegen. Gib der Ebene mit den kleinsten Sternen die langsamste Geschwindigkeit.
 
 ### 1.5 Funktion
 

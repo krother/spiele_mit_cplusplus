@@ -3,10 +3,12 @@
 
 ### Ein Fenster erzeugen
 
+Beachte, dass die Deklaration von `main` mit SDL unter Windows anders aussehen muss:
+
     #include <SDL.h>
     #include <SDL_image.h>
 
-    int main() {
+    int main(int a, char **b) {
         SDL_Init(SDL_INIT_VIDEO);
         SDL_Window *win = SDL_CreateWindow("Hello World!", 100, 100, 300, 300, SDL_WINDOW_SHOWN);
     }
