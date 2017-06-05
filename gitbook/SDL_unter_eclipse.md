@@ -39,11 +39,9 @@ Speichere den Quelltext ab und versuche, die Datei zu compilieren. **Du solltest
 
 ### 4. Kopiere die SDL-Bibliotheken
 
-Lade die Bibliotheken SDL2 und SDL2image herunter. 
+Lade die Bibliotheken SDL2 und SDL2image herunter. Du findest sie in der vorbereiteten Zip-Datei [mingw_dev_libs.zip](https://github.com/krother/spiele_mit_cplusplus/raw/master/mingw_dev_libs.zip).
 
-**TODO: Link zu `mingw_dev_libs/` einsetzen**
-
-Kopiere den Ordner in den Ordner `workspace/` in Deinem Benutzerverzeichnis. 
+Entpacke die Zip-Datei und verschiebe den Inhalt in den Ordner `workspace/mingw_dev_libs/` in Deinem Benutzerverzeichnis. 
 
 #### ACHTUNG:
 
