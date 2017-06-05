@@ -11,6 +11,8 @@ Beachte, dass die Deklaration von `main` mit SDL unter Windows anders aussehen m
     int main(int a, char **b) {
         SDL_Init(SDL_INIT_VIDEO);
         SDL_Window *win = SDL_CreateWindow("Hello World!", 100, 100, 300, 300, SDL_WINDOW_SHOWN);
+        SDL_Delay(2000);
+        return 0;
     }
 
 

@@ -5,7 +5,7 @@
 
 ## Ziel dieses Kurses
 
-In diesem Kurs lernst Du die Grundlagen von C++ lernen, indem Du kleine Computerspiele programmierst.
+In diesem Kurs lernst Du die Grundlagen von C++ kennen, indem Du kleine Computerspiele programmierst.
 
 ![Pac - Spielszene](images/pac.png)
 
