@@ -1,22 +1,15 @@
 
-# C++ - Tag 2
+# Projekt 3: Raumschiffrennen
 
-## Tagesziel
-
-Ein Level für ein Spiel mit kachelbasierter Grafik auf dem Bildschirm darstellen.
-
-![ein kachelbasiertes Spiel](06_projektskizze/bilder/fruit.png)
+In diesem Projekt gib es Action! Wir fliegen mit unserem Raumschiff mit Vollgas durch den Weltraum. Von rechts kommen Scharen unbekannter Flugobjekte angeflogen: Meteoriten, Außerirdische und wertvolle Materialien. Es gilt, die Boni einzusammeln, ohne mit den restlichen Objekten zu kollidieren.
 
 ## Etappenziele
 
-| Nr. | Ziel           | Schwierigkeit |
-|-----|----------------|---------------|
-| 01  | for-Schleifen lernen | LEICHT  |
-| 02  | Programme über die Kommandozeile compilieren | LEICHT |
-| 03  | Grafikbibliothek SDL installieren | MITTEL |
-| 04  | Übersicht über Datentypen in C erstellen | LEICHT |
-| 05  | Spielfeld zeichnen | MITTEL |
-| 06  | Projektskizze im Team entwickeln | MITTEL |
-| 07  | eine Figur über die Tastatur bewegen | SCHWER | 
-
+| Nr. | Name           | Thema  | Farbe |
+|-----|----------------|--------|-------|
+| 3.1 | Sternenhimmel | Grafik positionieren | gelb |
+| 3.2 | Das Raumschiff | Klassen  | orange |
+| 3.3 | Boni und Gegner | Vererbung | grün |
+| 3.4 | Bewegungspfade | Komposition  | grün |
+| 3.5 | Geschwader | Vektoren | blau |
 
