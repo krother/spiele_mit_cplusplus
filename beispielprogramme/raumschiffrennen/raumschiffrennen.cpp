@@ -1,170 +1,153 @@
-// classes example
-#include <iostream>
-#include <stdlib.h>
-#include <stdio.h>
-#include <vector>
-#include <cstddef>
 
 #include <SDL.h>
 #include <SDL_image.h>
-
 using namespace std;
+
 
 class Raumschiff {
     private:
-	  unsigned int kurs_position = 0;
-	  int schritte = 0;
-    protected:
-	  string kurs = "RRRRRRRRRRRRRRRRRR";
+        int kachelx = 0;
+        int kachely = 160;
     public:
-	  string name;
-      int posx = 0;
-      int posy = 0;
-      int geschwindigkeit = 0;
+        int posx = 0;
+        int posy = 0;
+        int geschwindigkeitx = 0;
+        int geschwindigkeity = 0;
 
-      Raumschiff(string n, int x, int y, string k) {
-          name = n;
-          posx = x;
-          posy = y;
-          kurs = k;
-      }
-      virtual void kurs_setzen(string neuer_kurs) {
-    	  kurs = neuer_kurs;
-      }
-      virtual void schneller(int beschleunigung) {
-          geschwindigkeit += beschleunigung;
-      }
-      virtual void langsamer() {
-    	  geschwindigkeit--;
-      }
-      virtual void bewegen() {
-    	  // je nachdem welcher Buchstabe im Kurs
-    	  // an der Stelle kurs_position steht,
-    	  // verändere die Position posx / posy
-    	  char richtung;
-    	  richtung = kurs[kurs_position];
-    	  switch (richtung) {
-    	      case 'R': posx += geschwindigkeit; break;
-    	      case 'L': posx -= geschwindigkeit; break;
-    	      case 'O': posy -= geschwindigkeit; break;
-    	      case 'U': posy += geschwindigkeit; break;
-    	      default: break;
-    	  }
-          // Bewegungszähler hochsetzen
-          schritte++;
-          if (schritte == 32) {
-            // ein Buchstabe aus dem Kurs fertig abgearbeitet
-        	  kurs_position++;
-        	  schritte = 0;
-        	  if (kurs_position == kurs.length()) {
-        		  kurs_position = 0;
-        	  }
-          }
+    // Konstruktor
+    Raumschiff(int x, int y) {
+        posx = x;
+        posy = y;
+    }
+    // bewegt Raumschiff entsprechend Geschwindigkeit
+    virtual void bewegen() {
+        posx += geschwindigkeitx;
+        posy += geschwindigkeity;
+        if (posx < 0) {
+            posx = 0;
+            geschwindigkeitx = 0;
+        }
+        if (posx > 770) {
+            posx = 770;
+            geschwindigkeitx = 0;
+        }
+        if (posy < 0) {
+            posy = 0;
+            geschwindigkeity = 0;
+        }
+        if (posy > 570) {
+            posy = 570;
+            geschwindigkeity = 0;
+        }
+    }
 
+    // zeichnet schiff
+    virtual void zeichnen(SDL_Surface *schiffe, SDL_Surface *surf) {
+        SDL_Rect source = {x: kachelx, y: kachely, w:32, h:32};
+        SDL_Rect dest = {x: posx, y: posy, w:32, h:32};
+        SDL_BlitSurface(schiffe, &source, surf, &dest);
+    }
+      void oben() { 
+        geschwindigkeity -= 2;
       }
-      virtual void ausgabe(SDL_Surface *bild, SDL_Surface *surf) {
-    	  SDL_Rect source = {x: 0, y: 160, w:32, h:32};
-    	  SDL_Rect dest = {x: posx, y: posy, w:32, h:32};
-    	  SDL_BlitSurface(bild, &source, surf, &dest);
+
+      void unten() { 
+        geschwindigkeity += 2;
+      }
+
+      void links() { 
+        geschwindigkeitx -= 2;
+      }
+
+      void rechts() { 
+        geschwindigkeitx += 2;
       }
 };
 
-class SchnellesSchiff: public Raumschiff {
 
-public:
-	SchnellesSchiff(string n, int y, string k):
-		Raumschiff(n, 0, y, k) {};
-	virtual void schneller(int beschleunigung) {
-		// 3 Mal schneller als normales Raumschiff
-		geschwindigkeit += 3*beschleunigung;
-	}
-};
-
-
-class Apollo: public Raumschiff {
-	public:
-	 Apollo(string n, int x, int y, string k): Raumschiff(n,x,y,k) {
-          name = n;
-          posx = x;
-          posy = y;
-          kurs = k;
-      }
-		void ausgabe(SDL_Surface *bild, SDL_Surface *surf){
-			SDL_Rect source = {x: 0, y: 32, w:32, h:32};
-			SDL_Rect dest = {x: posx, y: posy, w:32, h:32};
-			SDL_BlitSurface(bild, &source, surf, &dest);
-		}
-};
-
-int main(int, char**) {
-		// SDL initialisieren
-	    SDL_Init(SDL_INIT_VIDEO);
-
-	    SDL_Window *win = SDL_CreateWindow("Raumschiffrennen", 100, 100, 800, 600, SDL_WINDOW_SHOWN);
-	    SDL_Surface *surf = SDL_GetWindowSurface(win);
-
-	    // Bilder laden
-	    IMG_Init( IMG_INIT_PNG );
-	    SDL_Surface *hintergrund = IMG_Load("background.png");
-	    SDL_Surface *raumschiffe = IMG_Load("raumschiffe.png");
-
-      // Leerer Vektor für Raumschiffe
-      vector<Raumschiff> schiffe;
-      vector<SchnellesSchiff> schnelleschiffe;
-      vector<Apollo> apolloschiffe;
-
-      SchnellesSchiff neues_schiff = SchnellesSchiff("Nostromo", 64, "RURURORU");
-      neues_schiff.schneller(1);
-      schnelleschiffe.push_back(neues_schiff);
-
-      Raumschiff schiff2 = Raumschiff("Enterprise", 0, 96, "RRRRROLLORURULLL");
-      schiff2.schneller(1);
-      schiffe.push_back(schiff2);
-
-      Apollo ap = Apollo("Voyager", 0, 128, "R");
-      ap.schneller(1);
-      apolloschiffe.push_back(ap);
-
-/*
-      neues_schiff = Raumschiff("Enterprise", 0, 96, "RRRRROLLORURULLL");
-      neues_schiff.schneller(2);
-      schiffe.push_back(neues_schiff);
-
-      neues_schiff = Raumschiff("Voyager", 0, 128, "R");
-      neues_schiff.schneller(3);
-      schiffe.push_back(neues_schiff);
-
-      neues_schiff = Raumschiff("Millenium Falcon", 0, 192, "RURRURRROOOLLLLLLU");
-      neues_schiff.schneller(3);
-      schiffe.push_back(neues_schiff);
-
-      neues_schiff = Raumschiff("TIE", 0, 256, "OORRUULL");
-      neues_schiff.schneller(3);
-      schiffe.push_back(neues_schiff);
-*/
-  for (int i=0; i<500; i++) {
-	  SDL_BlitSurface(hintergrund, NULL, surf, NULL);
-
-	  // langsame Schiffe bewegen
-	  for (unsigned int j=0; j<schiffe.size(); j++) {
-   	      schiffe[j].bewegen();
-   	      schiffe[j].ausgabe(raumschiffe, surf);
-	  }
-	  // schnelle Schiffe bewegen
-	  for (unsigned int j=0; j<schnelleschiffe.size(); j++) {
-   	      schnelleschiffe[j].bewegen();
-   	      schnelleschiffe[j].ausgabe(raumschiffe, surf);
-	  }
-	  // Apollo-Schiffe bewegen
-	  for (unsigned int j=0; j<apolloschiffe.size(); j++) {
-		  apolloschiffe[j].bewegen();
-		  apolloschiffe[j].ausgabe(raumschiffe, surf);
-	  }
-	  SDL_UpdateWindowSurface(win);
-	  SDL_Delay(10);
-  }
-
-
-  return 0;
+// Abbruch und Tastaturbefehle abhandeln
+bool events_behandeln(Raumschiff *spieler) {  
+    SDL_Event e;
+    if ( SDL_PollEvent( &e ) != 0 ) { 
+        if( e.type == SDL_QUIT ) {
+            return true;
+        }
+        if( e.type == SDL_KEYDOWN ) { 
+            switch (e.key.keysym.sym) {
+                case SDLK_UP: spieler->oben();break;
+                case SDLK_DOWN: spieler->unten();break;
+                case SDLK_LEFT: spieler->links();break;
+                case SDLK_RIGHT: spieler->rechts();break;
+            }
+        }
+    }
+    return false;
 }
 
+
+
+class Sterne {
+    public:
+      SDL_Surface *bild;
+      int position;
+
+      Sterne(SDL_Surface *sternbild) {
+          bild = sternbild;
+          position = 0;
+      }
+      void bewegen(int geschwindigkeit) {
+          position += geschwindigkeit;
+          if (position >= 800) {
+              position -= 800;
+          }
+      }
+      void zeichnen(SDL_Surface *surf) {
+        SDL_Rect source = {x: 0, y: 0, w:800, h:600};
+        SDL_Rect dest = {x: position, y: 0, w:800, h:600};
+        SDL_BlitSurface(bild, &source, surf, &dest);
+        dest = {x: position-800, y: 0, w:800, h:600};
+        SDL_BlitSurface(bild, &source, surf, &dest);
+      }
+};
+
+
+int main(int, char**) {
+    SDL_Init(SDL_INIT_VIDEO);
+
+    SDL_Window *win = SDL_CreateWindow("Raumschiffrennen", 100, 100, 800, 600, SDL_WINDOW_SHOWN);
+    SDL_Surface *surf = SDL_GetWindowSurface(win);
+
+    // Bilder laden
+    IMG_Init( IMG_INIT_PNG );
+    SDL_Surface *hintergrund = IMG_Load("background.png");
+    SDL_Surface *raumschiffe = IMG_Load("raumschiffe.png");
+    SDL_Surface *sterne1 = IMG_Load("stars1.png");
+    SDL_Surface *sterne2 = IMG_Load("stars2.png");
+    SDL_Surface *sterne3 = IMG_Load("stars3.png");
+
+    Sterne s1(sterne1);
+    Sterne s2(sterne2);
+    Sterne s3(sterne3);
+
+    Raumschiff spieler = Raumschiff(50, 285);
+
+    bool ende = false;
+    while (!ende) {
+        // Hauptschleife
+        ende = events_behandeln(&spieler);
+        spieler.bewegen();
+        s1.bewegen(6);
+        s2.bewegen(3);
+        s3.bewegen(1);
+        
+        SDL_BlitSurface(hintergrund, NULL, surf, NULL);
+        s1.zeichnen(surf);
+        s2.zeichnen(surf);
+        s3.zeichnen(surf);
+        spieler.zeichnen(raumschiffe, surf);
+        SDL_UpdateWindowSurface(win);
+        SDL_Delay(20);
+    }
+
+  return 0;
+  }

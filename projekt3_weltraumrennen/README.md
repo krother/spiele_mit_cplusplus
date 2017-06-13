@@ -1,6 +1,8 @@
 
 # Projekt 3: Raumschiffrennen
 
+![Raumschiffrennen](raumschiffrennen.png)
+
 In diesem Projekt gib es Action! Wir fliegen mit unserem Raumschiff mit Vollgas durch den Weltraum. Von rechts kommen Scharen unbekannter Flugobjekte angeflogen: Meteoriten, Außerirdische und wertvolle Materialien. Es gilt, die Boni einzusammeln, ohne mit den restlichen Objekten zu kollidieren.
 
 ## Etappenziele
