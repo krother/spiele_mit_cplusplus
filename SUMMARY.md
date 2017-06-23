@@ -38,6 +38,7 @@
   * [Verzweigungen](gitbook/verzweigungen.md)
   * [Schleifen](gitbook/schleifen.md)
   * [Funktionen](gitbook/funktionen.md)
+  * [Zufallszahlen](gitbook/zufallszahlen.md)
 * [Die Grafikbibliothek SDL](gitbook/SDL_beispiele.md)
   * [Erste Schritte mit SDL](gitbook/SDL_erste_schritte.md)
   * [Events in SDL](gitbook/SDL_events.md)
