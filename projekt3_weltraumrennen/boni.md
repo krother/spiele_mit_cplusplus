@@ -1,6 +1,8 @@
 
 # Boni und Gegner
 
+![Boni und Gegner](bilder/boni_und_gegner.png)
+
 ### Ziel
 
 Du bist nicht allein! Im Weltraum gibt es noch mehr Flugobjekte. Manche davon sind freundlich, anderen sollte man aus dem Weg gehen.
