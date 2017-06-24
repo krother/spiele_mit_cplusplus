@@ -170,22 +170,16 @@ class Bonus: public Flugobjekt {
       animationsbilder = 12;
     }
 
-    void verschwindet() {
-      kachelx = 32;
-      posx = -10;      // erscheint bald wieder
-    }
-
-    void erscheint() {
-      kachelx = 0;
+    void zuruecksetzen() {
+      posx = 830;                // nach rechts setzen
+      posy = rand() % 550 + 10;  // auf zufälliger Höhe
     }
 
     void bewegen() {
         // Bewegung
         posx -= 5;
         if (posx < -32) {            // am linken Rand
-          erscheint();               // wieder sichtbar machen
-          posx = 810;                // nach rechts setzen
-          posy = rand() % 550 + 10;  // auf zufälliger Höhe
+          zuruecksetzen();
         }
         animation();
     }
@@ -206,7 +200,7 @@ class Meteor: public Flugobjekt {
         // es werden vier verschiedene Teile aus dem Bild angezeigt
         // Bewegen
         posx -= 8;
-        if (posx < -32) {            // am linken Rand
+        if (posx < -32) {            // hinter dem linken Rand
           posy = rand() % 550 + 10;  // auf zufälliger Höhe
           posx = 810;                // nach rechts setzen
         }
@@ -267,7 +261,7 @@ int main(int, char**) {
     Raumschiff spieler = Raumschiff(b_raumschiffe, 50, 285);
     Bonus bonus = Bonus(b_bonus, 700,100);
     Blitzy blitzy = Blitzy(b_blitzy, 700, 500);
-    Meteor meteor = Meteor(b_meteor, 700, 300);
+    Meteor meteor = Meteor(b_meteor, 800, 300);
 
     /*
         Hauptschleife
@@ -289,7 +283,7 @@ int main(int, char**) {
         // Kollisionsabfrage
         if (spieler.kollision(blitzy) || spieler.kollision(meteor)) { ende = true;}
         if (spieler.kollision(bonus)) { 
-            bonus.verschwindet();
+            bonus.zuruecksetzen();
             sterne_gesammelt++;
         }
         
