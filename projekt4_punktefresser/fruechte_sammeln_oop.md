@@ -32,14 +32,3 @@
 ## 12. Klausuraufgaben
 
 * Beantwortet gemeinsam die *IHK-Klausurfragen* für Tag 1.
-
-## 13. Extraaufgaben
-
-### Aufgabe 13.1
-
-* Gibt es eine Einstellung, mit der die DLL-Dateien in ein anderes Verzeichnis gelegt werden können?
-
-### Aufgabe 13.2
-
-* Versuche die Programme mit Eclipse zu compilieren.
-
