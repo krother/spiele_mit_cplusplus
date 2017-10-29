@@ -69,8 +69,8 @@ Beispiel:
     if ((monat < 1) || (monat > 12) {
     	cout << "Diesen Monat gibt es gar nicht!";
     }
-    if (!monat == 12) {
-        cout << "In diesem Monat ist nicht Weihnachten";
+    if (!ende) {
+        cout << "Das Spiel geht weiter.";
     }
 
 ### Schiebeoperatoren

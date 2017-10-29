@@ -9,7 +9,7 @@ Die Bibliothek `iostream` enthält eine einfache Ausgabemethode: Streams. Ein St
 
 Über die Anweisung `#include` sagst Du C++, daß Du eine bestimmte Bibliothek verwenden möchtest:
 
-    &#35;include &lt;iostream&gt;
+    #include <iostream>
     using namespace std;
 
 Der Stream `cout` ist für die Ausgabe zuständig. Du kannst eine Textausgabe mit dem Operator `<<` auslösen:

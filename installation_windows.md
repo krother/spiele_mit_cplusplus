@@ -12,7 +12,6 @@ Zuerst installieren wir den C++-Compiler **MinGW**.
 
 ![Paketauswahl](gitbook/bilder_installation/mingw_packages.png)
 
-
 #### Überprüfung
 
 Öffne eine Windows-Konsole (führe das Programm `cmd` aus). Wechsle in das MinGW Verzeichnis mit
@@ -24,12 +23,21 @@ Führe das Programm `g++` aus. Wenn Du die folgende Fehlermeldung siehst, hat al
     g++: fatal error: no input files
     compilation terminated.
 
-**Gratuliere!** Damit hast Du theoretisch alles was Du benötigst. Allerdings werden wir noch ein paar weitere Programme installieren, um uns die Arbeit bequemer zu machen.
+
+## Schritt 2: Code::Blocks installieren
+
+Unter [www.codeblocks.org/](http://www.codeblocks.org/) findest Du im Abschnitt **Downloads** die Entwicklungsumgebung für Dein Betriebssystem. 
+
+1. Schaue unter **"Download the binary release"**.
+2. Wähle unter Windows `codeblocks-16.01mingw-setup.exe`
+3. Installiere das Programm mit den Optionen `base` und `gcc`.
+
+**Anmerkung:** Ich vermute, dass die Installation von MinGW mit dieser Installation überhaupt nicht nötig ist. Habe es aber nicht ausprobiert.
 
 
-## Schritt 2: Pfad auf MinGW setzen
+## Optional: Pfad auf MinGW setzen
 
-Damit wir den Compiler `g++` von überall her starten können, müssen wir die sogenannte **Pfadvariable** setzen. Windows sucht nach zu startenden Programmen in den im Pfad angegebenen Verzeichnissen.
+Damit Du den Compiler `g++` auf  überall her starten können, musst Du die sogenannte **Pfadvariable** setzen. Windows sucht nach zu startenden Programmen in den im Pfad angegebenen Verzeichnissen. Und so geht es (*unter Windows 10 ist es vermutlich schon wieder anders :-(*):
 
 1. Öffne die *Systemsteuerung*
 2. Öffne dort die Kategorie *System*
@@ -43,31 +51,4 @@ Damit wir den Compiler `g++` von überall her starten können, müssen wir die s
 #### Überprüfung
 
 Öffne eine Windows-Konsole (führe das Programm `cmd` aus). Tippe ohne das Verzeichnis zu wechseln `g++` ein. Wenn die gleiche Fehlermeldung (*`fatal error`*) wie oben erscheint, hat es funktioniert. 
-
-
-## Schritt 3: Eclipse installieren
-
-**Eclipse** ist eine komfortablere Entwicklungsumgebung zum Schreiben von C++-Programmen. Allerdings ist die Einarbeitung auch deutlich länger als mit einem Texteditor. Eclipse ist in der Programmiersprache **Java** geschrieben, die wir ebenfalls installieren müssen.
-
-1. Lade das **JDK** (nicht JRE!) von [www.java.com](http://www.java.com) herunter. Zuletzt überprüft wurde das [Java SE Development Kit 8u131](http://www.oracle.com/technetwork/java/javase/downloads/index-jsp-138363.html#javasejdk)
-]
-2. Lade **Eclipse Neon** von [www.eclipse.org/downloads/](http://www.eclipse.org/downloads/) herunter
-3. Installiere das JDK.
-4. Installiere Eclipse. Wähle im Installationsprogramm die Option **Eclipse für C++** aus.
-
-#### Überprüfung
-
-Erstelle in Eclipse ein neues C++-Projekt. 
-
-![Projekt erstellen](gitbook/bilder_installation/new_project.png)
-
-Wähle als Typ MinGW und **"C++ Hello World Project"**. Gib dem Projekt einen Namen. Kompiliere das Programm mit dem Knopf **build** und führe es aus. Wenn du eine Nachricht im Ausgabefenster siehst, hat alles funktioniert. 
-
-![Projekt erstellen](gitbook/bilder_installation/new_project2.png)
-
-#### Erste Hilfe
-
-Eventuell mußt Du die Eclipse-Oberfläche von Java auf C++ umstellen. Das kannst Du im Menü `Window -> Perspective -> C++`.
-
-Falls die Option *"Eclipse für C++"* bei Schritt 4 nicht erscheint, suche im Internet nach **Eclipse CDT**.
 
