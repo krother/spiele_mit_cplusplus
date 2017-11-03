@@ -3,17 +3,25 @@
 
 Variablen sind *"Behälter"* für Daten in einem Programm. Du kannst darin Daten ablegen, und sie später im Programm mehrmals verwenden. 
 
-### Variablen definieren
 
-Bei der ersten Verwendung musst Du eine Variable **definieren**. Das bedeutet, dem C++-Compiler müssen mehrere Dinge mitgeteilt werden:
+### Variablen deklarieren
+
+Bei der ersten Verwendung musst Du eine Variable **deklarieren**. Das bedeutet, dem C++-Compiler muss mitgeteilt werden:
 
 1. Wie die Variable heißt
 2. Welchen Datentyp sie hat.
-3. Welchen Startwert sie hat (optional)
 
-Dabei steht der Datentyp immer links, der Name rechts daneben. Es folgt ein Gleichheitszeichen und dann der Startwert.
+Die Deklaration einer Integer-Variable (*ganze Zahl*) mit dem Namen `a` sähe folgendermaßen aus:
 
-Die Definition einer *ganzzahligen Variable* (Typ `int`) sieht so aus:
+    int a;
+
+#### Achtung:
+
+Jede Variable darf **nur einmal pro Codeabschnitt** (Funktion, Datei) deklariert werden!
+
+### Startwert
+
+Bei der Deklaration darf man einen Startwert für die Variable festlegen. Dies ist optional. Dabei steht der Datentyp immer links, der Name rechts daneben:
 
     int jahr = 2017;
 
@@ -25,7 +33,9 @@ Manche Datentypen sind in Erweiterungsmodulen definiert. Zum Beispiel enthält d
 
     SDL_Window *win;
 
-### Inhalt von Variablen ausgeben
+Die Schreibweise ist eigentlich zu der einer Integer-Variable identisch. Weil dabei aber andere Wörter (die eigens definierten Datentypen) und manchmal auch Sonderzeichen (Sternchen, spitze Klammern) vorkommen, erkennt man das nicht immer gleich.
+
+### Inhalt einer Variablen ausgeben
 
 Ist eine Variable erst einmal definiert, können wir sie anstelle ihres Wertes verwenden. Oft möchte man den Wert einfach nur ausgeben:
 
@@ -35,7 +45,7 @@ Oder man führt eine Berechnung mit dem Wert durch:
 
     cout << jahr + 1 << endl;
 
-### Inhalt von Variablen verändern
+### Inhalt einer Variablen verändern
 
 Interessant werden Variablen dadurch, daß Du ihren Inhalt jederzeit verändern darfst. Zum Beispiel überschreibt die folgende Zeile den zuvor gespeicherten Wert:
 

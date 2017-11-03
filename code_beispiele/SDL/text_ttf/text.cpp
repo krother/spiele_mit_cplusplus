@@ -1,4 +1,4 @@
-#include <iostream>
+#include <string>
 #include <stdlib.h>
 #include <stdio.h>
 #include <SDL.h>
@@ -21,8 +21,7 @@ int main() {
     SDL_Window *win = SDL_CreateWindow("Hello World!", 100, 100, 600, 300, SDL_WINDOW_SHOWN);
     SDL_Surface *surf = SDL_GetWindowSurface(win);
 
-    //char *text = itoa(777);
-    char *text = "Hallo SDL";
+    char *text = 'Hallo SDL';
     drawText(surf, text);
 
     SDL_UpdateWindowSurface(win);

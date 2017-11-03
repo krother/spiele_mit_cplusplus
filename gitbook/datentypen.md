@@ -1,7 +1,19 @@
 
 # Datentypen
 
-C++ kennt eine große Zahl von Datentypen. Hier werden die *einfachen* Datentypen vorgestellt.
+C++ kennt eine große Zahl von Datentypen. Dies sind die wichtigsten:
+
+| Datentyp | Beschreibung |
+|----------|--------------|
+| int      | ganze Zahlen |
+| float    | Kommazahlen  |
+| char     | Buchstaben   |
+| string   | Zeichenketten |
+| array    | einfache Listen konstanter Größe |
+| enum     | Aufzählung |
+| struct   | Gruppe mit gemischten Typen |
+| Vector   | Listen variabler Größe |
+
 
 ## Integer
 

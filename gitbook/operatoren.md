@@ -3,26 +3,6 @@
 
 In C++-Anweisungen gibt es eine große Anzahl Sonderzeichen. Viele davon sind **Operatoren**. Hier folgt ein Überblick über die wichtigsten Operatoren.
 
-### Variablenzuweisung
-
-Der Operator `=` weist einen Wert einer Variablen zu. Er kommt in mehreren Varianten vor. Die einfachste ist:
-
-    a = 0;
-
-Dazu muß der Datentyp von `a` aber vorher definiert worden sein. Das läßt sich auch in der gleichen Zeile tun:
-
-    int a = 0;
-
-Statt `int` könnte hier auch ein selbst definierter Datentyp stehen.
-
-Die Variablenzuweisung läßt sich mit den vier Grundrechenarten kombinieren, so daß sich eine kompaktere Schreibweise ergibt. So ist
-
-    a += 3;
-
-das gleiche wie
-
-    a = a + 1;
-
 
 ### Arithmetik
 
@@ -45,6 +25,22 @@ Der *Modulo-Operator* ergibt den *Rest* einer ganzzahligen Division, z.B.
      9 % 4 ergibt 4
 
 
+
+### Variablenzuweisung
+
+Der Operator `=` weist einen Wert einer Variablen zu. Er kommt in mehreren Varianten vor. Die einfachste ist:
+
+    a = 0;
+
+Die Variablenzuweisung läßt sich mit den vier Grundrechenarten kombinieren, so daß sich eine kompaktere Schreibweise ergibt. So ist
+
+    a += 3;
+
+das gleiche wie
+
+    a = a + 1;
+
+
 ### Vergleichsoperatoren
 
 In `if`-Ausdrücken und Schleifen können Werte mit den Operatoren `==`, `!=`, `<`, `<=`, `>` und `>=` verglichen werden.
@@ -53,9 +49,9 @@ In `if`-Ausdrücken und Schleifen können Werte mit den Operatoren `==`, `!=`, `
 
 Die Operatoren `==` und `=` sind für das Auge leicht zu verwechseln. Glücklicherweise wird der Compiler meist aus dem Kontext erkennen worum es geht und sich beschweren.
 
-### logische Operatoren (and, or, not)
+### Logische Operatoren
 
-In `if`-Ausdrücken ist es manchmal hilfreich, mehrere Vergleiche zu verknüpfen. Dazu dienen die logischen Vergleichsoperatoren:
+In `if`-Ausdrücken ist es manchmal hilfreich, mehrere Vergleiche zu verknüpfen. Dazu dienen die logischen Vergleichsoperatoren *and, or* und *not*:
 
 * der Operator `&&` steht für ein logisches *und*
 * der Operator `||` steht für ein logisches *oder*
@@ -73,6 +69,7 @@ Beispiel:
         cout << "Das Spiel geht weiter.";
     }
 
+
 ### Schiebeoperatoren
 
 Der Schiebeoperator `<<` wird für die Ausgabe mittels `cout` verwendet.
@@ -89,6 +86,3 @@ Ein `*` nach einem Variablentyp steht für einen sogenannten *Zeiger* (eine Spei
     int *lange_liste[100];
 
 Der Operator `&` liefert die Speicheradresse einer beliebigen Variablen, wandelt sie also in einen Zeiger um.
-
-Wir werden Zeiger im Kurs nicht im Detail behandeln, es genügt zu wissen daß es sich um einen Zeiger handelt, sobald Ihr `*` und `&` seht.
-
