@@ -14,6 +14,7 @@ int main() {
     zahlen[0] = 1;
     zahlen[1] = 4;
     zahlen[2] = 9;
+    zahlen[3] = 16;
     zahlen[4] = 25;
 
     // wieder auslesen;

@@ -1,9 +1,27 @@
 
 # Compilieren auf der Kommandozeile
 
-Wir können ein C++-Programm auch ohne Eclipse compilieren. Das hilft, den Prozeß genauer zu verstehen. Wir rufen dazu den Compiler direkt von der **Kommandozeile** aus.
+Wir können ein C++-Programm auch ohne Code::Blocks compilieren. Wir rufen dazu den Compiler direkt von der **Kommandozeile** aus.
 
-## Arbeitsschritte
+## Pfad auf MinGW setzen (einmalig)
+
+Damit Du den Compiler `g++` auf  überall her starten können, musst Du die sogenannte **Pfadvariable** setzen. Windows sucht nach zu startenden Programmen in den im Pfad angegebenen Verzeichnissen. Und so geht es (*unter Windows 10 ist es vermutlich schon wieder anders :-(*):
+
+1. Öffne die *Systemsteuerung*
+2. Öffne dort die Kategorie *System*
+3. Wähle dort den Abschnitt *Erweiterte Systemeinstellungen* oder *Erweitert*
+4. Drücke den Knopf *Umgebungsvariablen*
+5. Erstelle eine neue Umgebungsvariable *PATH* mit dem Wert *`C:\MinGW\bin`* . Falls *PATH* bereits definiert ist, kannst Du über **ein Semikolon** weitere Verzeichnisse anhängen, also `was_schon_da_war;C:\MinGW/bin`
+6. Schliesse den Dialog und die Systemsteuerung wieder. **Erst dann werden die Änderungen wirksam**.
+
+![Pfadvariable](bilder_installation/environment_vars.png)
+
+#### Überprüfung
+
+Öffne eine Windows-Konsole (führe das Programm `cmd` aus). Tippe ohne das Verzeichnis zu wechseln `g++` ein. Wenn die gleiche Fehlermeldung (*`fatal error`*) wie oben erscheint, hat es funktioniert. 
+
+
+## Compilieren unter Windows
 
 1. Finde den Quelltext eines funktionierenden C++-Programms, z.B. `hello.cpp`.
 
@@ -19,11 +37,14 @@ Wir können ein C++-Programm auch ohne Eclipse compilieren. Das hilft, den Proze
 
 6. Rufe den Compiler auf, indem Du eingibst:
 
-    g++ hello.cpp -o hello.exe
+    g++ hallo.cpp -o hallo.exe
+
+Der Schalter `-o` sagt dem Compiler, dass die Ausgabe in die Datei `hallo.exe` geschrieben werden soll.
 
 7. Welche Datei ist entstanden?
 
 8. Rufe die Datei auf, indem Du in der Konsole `dateiname.exe` eingibst. 
+
 
 ## Compilieren unter Linux und Mac
 
@@ -39,21 +60,3 @@ Grundsätzlich funktioniert das Kompilieren genauso, außer daß:
 Oder wenn Du keinen Namen der Ausgabedatei angibst:
 
     ./a.out
-
-
-## Zusatzaufgabe
-
-Nun werden wir den Prozeß wiederholen, aber uns die Arbeit etwas bequemer machen
-
-1. Lösche die compilierte Datei (`hello.exe`)
-
-2. Starte das Programm `Notepad++`
-
-3. Gib den Aufruf des Compilers (`g++ hello.cpp -o hello`) in eine leere Datei ein
-
-4. Speichere die Datei im gleichen Verzeichnis wie `hello.cpp` unter dem Namen `hello.bat`
-
-5. Klicke `hello.bat` an.
-
-6. Prüfe ob ein ausführbares Programm entstanden ist.
-

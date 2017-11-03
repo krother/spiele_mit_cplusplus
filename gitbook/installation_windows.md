@@ -1,7 +1,7 @@
 
-# Installation von C++ unter Windows
+# Code::Blocks unter Windows installieren
 
-## Schritt 1: MinGW installieren
+## Schritt 1: Den Compiler MinGW installieren
 
 Zuerst installieren wir den C++-Compiler **MinGW**.
 
@@ -10,7 +10,7 @@ Zuerst installieren wir den C++-Compiler **MinGW**.
 3. Wähle in der Paketauswahl die Pakete **base** und **gcc** an.
 4. Wähle im Menü `Apply Changes` aus, um die Pakete zu installieren.
 
-![Paketauswahl](gitbook/bilder_installation/mingw_packages.png)
+![Paketauswahl](bilder_installation/mingw_packages.png)
 
 #### Überprüfung
 
@@ -33,22 +33,4 @@ Unter [www.codeblocks.org/](http://www.codeblocks.org/) findest Du im Abschnitt 
 3. Installiere das Programm mit den Optionen `base` und `gcc`.
 
 **Anmerkung:** Ich vermute, dass die Installation von MinGW mit dieser Installation überhaupt nicht nötig ist. Habe es aber nicht ausprobiert.
-
-
-## Optional: Pfad auf MinGW setzen
-
-Damit Du den Compiler `g++` auf  überall her starten können, musst Du die sogenannte **Pfadvariable** setzen. Windows sucht nach zu startenden Programmen in den im Pfad angegebenen Verzeichnissen. Und so geht es (*unter Windows 10 ist es vermutlich schon wieder anders :-(*):
-
-1. Öffne die *Systemsteuerung*
-2. Öffne dort die Kategorie *System*
-3. Wähle dort den Abschnitt *Erweiterte Systemeinstellungen* oder *Erweitert*
-4. Drücke den Knopf *Umgebungsvariablen*
-5. Erstelle eine neue Umgebungsvariable *PATH* mit dem Wert *`C:\MinGW\bin`* . Falls *PATH* bereits definiert ist, kannst Du über **ein Semikolon** weitere Verzeichnisse anhängen, also `was_schon_da_war;C:\MinGW/bin`
-6. Schliesse den Dialog und die Systemsteuerung wieder. **Erst dann werden die Änderungen wirksam**.
-
-![Pfadvariable](gitbook/bilder_installation/environment_vars.png)
-
-#### Überprüfung
-
-Öffne eine Windows-Konsole (führe das Programm `cmd` aus). Tippe ohne das Verzeichnis zu wechseln `g++` ein. Wenn die gleiche Fehlermeldung (*`fatal error`*) wie oben erscheint, hat es funktioniert. 
 

@@ -14,12 +14,6 @@ In diesem Kurs verwenden wir:
 
 **MinGW** ist eine Implementierung des freien C++-Compilers **GCC** für Windows.
 
-MinGW läßt sich direkt über die Windows-Kommandozeile aufrufen. Der Aufruf zum Compilieren des Programms `hallo.cpp` sieht folgendermaßen aus:
-
-    g++ hallo.cpp -o hallo.exe
-
-Der Schalter `-o` sagt dem Compiler, dass die Ausgabe in die Datei `hallo.exe` geschrieben werden soll.
-
 ### Code::Blocks
 
 **Code::Blocks** ist eine **Entwicklungsumgebung**, eine grafische Oberfläche zum Programmieren. Code::Blocks enthält einen *Texteditor*, ruft MinGW als *Compiler* auf und führt fertige *Programme* aus. Code::Blocks läuft unter Windows, Linux und MaxOS.
@@ -31,7 +25,7 @@ Einige Dinge sind bei der Arbeit mit Code::Blocks zu beachten:
 * Innerhalb eines Projekts darf es die Funktion `main()` nur einmal geben.
 
 
-## Andere Werkzeuge.
+## Andere Werkzeuge
 
 ### Die Kommandozeile
 
