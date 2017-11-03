@@ -2,43 +2,17 @@
 #include <SDL.h>
 #include <SDL_image.h>
 
-const int LEERTASTE = 32;
 
 // SDL starten und Fenster erzeugen
 SDL_Window* fenster_initialisieren() {    
-    // SDL Starten
-    if (SDL_Init(SDL_INIT_VIDEO) != 0){
-        std::cout << "SDL_Init Error: " << SDL_GetError() << std::endl;
-        return NULL;
-    }
+    SDL_Init(SDL_INIT_VIDEO);
+    IMG_Init( IMG_INIT_PNG );
     SDL_Window *win = SDL_CreateWindow("Hello World!", 100, 100, 640, 480, SDL_WINDOW_SHOWN);
-
-    if (win == 0) {
-      std::cout << "window failed"; 
-      return NULL;
-    }
     return win;
 }
 
 
-// Laden des Bildes mit Spielelementen
-SDL_Surface* kacheln_laden(SDL_Surface *surf) {
-    int imgFlags = IMG_INIT_PNG; 
-    if( !( IMG_Init( imgFlags ) & imgFlags ) ) { 
-        //printf( "SDL_image could not initialize! SDL_image Error: %s\n", IMG_GetError() ); 
-        return NULL;
-    }
-
-    SDL_Surface *xpm = IMG_Load("tiles.xpm");
-    if (xpm == NULL){
-        std::cout << "SDL Image Loading Error: " << SDL_GetError() << std::endl;
-        return NULL;
-    }
-    SDL_Surface *img = SDL_ConvertSurface( xpm, surf->format, 0 );
-    return img;
-}
-
-
+// eine Kachel zeichnen
 void blit(SDL_Surface *img, SDL_Surface *surf, int x, int y, int dx, int dy) {
     SDL_Rect source{x: x*32, y: y*32, w:32, h:32};
     SDL_Rect destination{x: dx*32, y: dy*32, w:32, h:32};
@@ -46,7 +20,16 @@ void blit(SDL_Surface *img, SDL_Surface *surf, int x, int y, int dx, int dy) {
 }
 
 
-void event_loop(SDL_Window *win, SDL_Surface *surf, SDL_Surface *img) {
+void feld_fuellen(SDL_Surface *img, SDL_Surface *surf) {
+    // 20x15 Kacheln mit Boden zeichnen
+    for (int i=0; i<20; i++) {
+        for (int j=0; j<15; j++) {
+            blit(img, surf, 0, 1, i, j);
+        }
+    }
+}
+
+void hauptschleife(SDL_Window *win, SDL_Surface *surf, SDL_Surface *img) {
     bool quit = false;
     SDL_Event e; 
     int x = 4;
@@ -68,8 +51,8 @@ void event_loop(SDL_Window *win, SDL_Surface *surf, SDL_Surface *img) {
                     case SDLK_DOWN: y += 1; break; 
                     case SDLK_LEFT: x -= 1; break; 
                     case SDLK_RIGHT: x += 1; break; 
-                    case LEERTASTE: quit = true; break; 
-                    default: std::cout << "nix\n"; break; 
+                    case SDLK_SPACE: 
+                    case SDLK_ESCAPE: quit = true; break; 
                 }
                 blit(img, surf, 3, 0, x, y);
             }
@@ -82,19 +65,14 @@ void event_loop(SDL_Window *win, SDL_Surface *surf, SDL_Surface *img) {
 int main(int, char**){
     SDL_Window *win = fenster_initialisieren();
     SDL_Surface *surf = SDL_GetWindowSurface(win);
-    SDL_Surface *img = kacheln_laden(surf);
+    SDL_Surface *img = IMG_Load("tiles.png");
+    
+    feld_fuellen(img, surf);
 
-    // Feld fuellen
-    for (int i=0; i<20; i++) {
-        for (int j=0; j<15; j++) {
-            blit(img, surf, 0, 1, i, j);
-        }
-    }
-
-    event_loop(win, surf, img); 
-	
-	SDL_DestroyWindow(win);
-	SDL_Quit();
-	
-	return 0;
+    hauptschleife(win, surf, img); 
+    
+    SDL_DestroyWindow(win);
+    SDL_Quit();
+    
+    return 0;
 }
