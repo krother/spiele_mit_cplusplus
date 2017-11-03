@@ -1,18 +1,13 @@
 
-# Beispiele zu SDL
+# Beispiele zu SDL2
 
-### Box mit Nachricht anzeigen
+SDL2 ist eine Grafikbibliothek für C++. Du kannst damit:
 
-	SDL_ShowSimpleMessageBox(0, "Hello", "Hello World", win);
-    
-    SDL_ShowSimpleMessageBox(SDL_MESSAGEBOX_INFORMATION,
-             "Fenstertitel", "Hello World.", NULL);
+* Fenster erzeugen
+* Grafiken in den Fenstern zeichnen
+* Eingaben von Maus und Tastatur auswerten
 
-### Kollisionserkennung
+Die Bibliothek selbst findest Du unter [www.libsdl.org](https://www.libsdl.org).
 
-    SDL_Rect a = {x: 10, y:10, w:10, h:10};
-    SDL_Rect b = {x: 20, y:20, w:10, h:10};
+Eine wesentliche Quelle für mich ist das [SDL2-Tutorial von Lazy Foo](http://lazyfoo.net)
 
-    if (SDL_HasIntersection(&a, &b)) {
-        cout << "BOOM" << endl;
-    }

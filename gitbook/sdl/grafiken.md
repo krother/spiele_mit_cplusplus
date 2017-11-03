@@ -1,24 +1,18 @@
 
-# Erste Schritte mit SDL
+# Grafiken anzeigen
 
-### Ein Fenster erzeugen
+### Die Bibliothek SDL_image
 
-Beachte, dass die Deklaration von `main` mit SDL unter Windows anders aussehen muss:
+`SDL_image` ist eine Erweiterung für SDL, mit der auch `.png`-Dateien eingelesen werden können (sonst gehen auf Windows nur `.bmp`-Bilder).
 
-    #include <SDL.h>
+`SDL_image` benötigt ein eigenes `include`:
+
     #include <SDL_image.h>
-
-    int main(int a, char **b) {
-        SDL_Init(SDL_INIT_VIDEO);
-        SDL_Window *win = SDL_CreateWindow("Hello World!", 100, 100, 300, 300, SDL_WINDOW_SHOWN);
-        SDL_Delay(2000);
-        return 0;
-    }
 
 
 ### Ein Bild laden
 
-Um ein Bild namens `fruechte.png` zu laden:
+Ein Bild namens `fruechte.png` kannst Du folgendermaßen laden:
 
     IMG_Init( IMG_INIT_PNG );    
     SDL_Surface *png = IMG_Load("fruechte.png");
@@ -40,10 +34,6 @@ Die Funktion `SDL_BlitSurface` kopiert einen rechteckingen Bereich aus einem Bil
 
 ### Das Fenster aktualisieren
 
-Immer nachdem wir in das Fenster gezeichnet haben, müssen wir das Fenster aktualisieren. Sonst sehen wir nichts: 
+Jedes Mal, wenn wir in ein Fenster gezeichnet haben, müssen wir das Fenster aktualisieren. Sonst sehen wir nichts: 
 
     SDL_UpdateWindowSurface(win);
-
-### Zwei Sekunden warten
-
-    SDL_Delay(2000);
