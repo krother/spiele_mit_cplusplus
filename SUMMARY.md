@@ -26,11 +26,13 @@
   * [Die Spielfigur](projekt4_punktefresser/spielfigur.md)
   * [Früchte](projekt4_punktefresser/fruechte.md)
 * [C++ Installieren](gitbook/programmierwerkzeuge.md)
-  * [C++ unter Windows installieren](installation_windows.md)
+  * [C++ unter Windows installieren](gitbook/installation_windows.md)
   * [Eclipse installieren](gitbook/installation_eclipse.md)
   * [SDL unter Eclipse installieren](gitbook/SDL_unter_eclipse.md)
   * [SDL auf der Kommandozeile installieren](gitbook/SDL_installieren.md)
+* [Programme erstellen und compilieren]
   * [Compilieren auf der Kommandozeile](gitbook/compilieren_kommandozeile.md)
+  * [Pseudocode](gitbook/pseudocode.md)
 * [C++ Grundlagen]
   * [Ein Programm schreiben](gitbook/programm_schreiben.md)
   * [Textausgabe](gitbook/textausgabe.md)
@@ -43,7 +45,6 @@
   * [Schleifen](gitbook/schleifen.md)
   * [Funktionen](gitbook/funktionen.md)
   * [Zufallszahlen](gitbook/zufallszahlen.md)
-  * [Pseudocode](gitbook/pseudocode.md)
 * [Die Grafikbibliothek SDL](gitbook/sdl/README.md)
   * [Fenster erzeugen](gitbook/sdl/fenster.md)
   * [Grafiken anzeigen](gitbook/sdl/grafiken.md)
