@@ -22,7 +22,7 @@ Ein Bild namens `fruechte.png` kannst Du folgendermaßen laden:
 
 Gezeichnet wird auf der Oberfläche des Fensters. Diese hat den Typ `SDL_Surface*` und muss einmalig zu Beginn erstellt werden:
 
-    SDL_Surface* = SDL_GetWindowSurface(win);
+    SDL_Surface *surf = SDL_GetWindowSurface(win);
 
 
 ### Das Fenster aktualisieren

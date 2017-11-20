@@ -22,7 +22,7 @@
   * [Bewegungspfade](projekt3_weltraumrennen/bewegungspfade.md)
   * [Geschwader](projekt3_weltraumrennen/geschwader.md)
 * [Projekt 4: Punktefresser](projekt4_punktefresser/README.md)
-  * [Ein Spielfeld zeichnen](projekt4_punktefresser/.md)
+  * [Ein Spielfeld zeichnen](projekt4_punktefresser/spielfeld_zeichnen.md)
   * [Die Spielfigur](projekt4_punktefresser/spielfigur.md)
   * [Früchte](projekt4_punktefresser/fruechte.md)
 * [Programmierwerkzeuge](gitbook/programmierwerkzeuge.md)
