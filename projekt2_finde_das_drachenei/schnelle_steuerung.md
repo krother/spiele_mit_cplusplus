@@ -51,6 +51,7 @@ In diesem Schritt geben wir einfach nur die gedrückten Tasten aus. Dazu möchte
     while( SDL_PollEvent( &e ) != 0 ) { 
         if( e.type == SDL_KEYDOWN ) {
         	cout << "Taste gedrückt" << e.key.keysym.sym << endl;
+        }
     }
 
 **Compiliere das Programm und stelle sicher, dass es läuft. Du solltest bei jedem Tastendruck eine Zahl in der Ausgabe sehen.**

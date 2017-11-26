@@ -49,6 +49,7 @@
   * [Fenster erzeugen](gitbook/sdl/fenster.md)
   * [Grafiken anzeigen](gitbook/sdl/grafiken.md)
   * [Events](gitbook/sdl/events.md)
+  * [Text](gitbook/sdl/text.md)
   * [Vollbildmodus](gitbook/sdl/vollbildmodus.md)
   * [Sonstiges](gitbook/sdl/sonstiges.md)
 * [Das Abschlußprojekt](gitbook/projekt/README.md)

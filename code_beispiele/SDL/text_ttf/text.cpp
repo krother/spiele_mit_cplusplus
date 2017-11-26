@@ -1,30 +1,46 @@
 #include <string>
-#include <stdlib.h>
-#include <stdio.h>
 #include <SDL.h>
-#include <SDL_image.h>
 #include <SDL_ttf.h>
 using namespace std;
 
-void drawText(SDL_Surface* screen, char *message) {
-	TTF_Init();
-	TTF_Font* font = TTF_OpenFont("LucidaSansDemiBold.ttf", 40);
-	SDL_Color White = {255, 255, 255};
-	SDL_Surface* surf = TTF_RenderText_Solid(font, message, White);
-	SDL_BlitSurface(surf, NULL, screen, NULL);
-	TTF_CloseFont(font);
+
+SDL_Window* win;
+SDL_Surface* surf;
+TTF_Font *font;
+
+
+SDL_Color black = {0, 0, 0};
+SDL_Color red = {255, 0, 0};
+SDL_Color blue = {0, 0, 255};
+
+
+void render_text(int x, int y, string text, SDL_Color farbe=black) {
+    
+    SDL_Surface* tsurf = TTF_RenderText_Solid(font, text.c_str(), farbe);
+        
+    int breite = tsurf->w;
+    int hoehe = tsurf->h;
+
+    SDL_Rect pos = {x, y, breite, hoehe};
+    SDL_BlitSurface(tsurf, NULL, surf, &pos);
+    SDL_FreeSurface(tsurf);
 }
 
 
-int main() {
-    SDL_Init(SDL_INIT_VIDEO|IMG_INIT_PNG);
-    SDL_Window *win = SDL_CreateWindow("Hello World!", 100, 100, 600, 300, SDL_WINDOW_SHOWN);
-    SDL_Surface *surf = SDL_GetWindowSurface(win);
+int main(int a, char **b) {
+    SDL_Init(SDL_INIT_VIDEO);
 
-    char *text = 'Hallo SDL';
-    drawText(surf, text);
+    win = SDL_CreateWindow("Hello Text", 100, 100, 600, 400, SDL_WINDOW_SHOWN);
+    surf = SDL_GetWindowSurface(win);
+
+    TTF_Init();
+    font = TTF_OpenFont("LucidaSansDemiBold.ttf", 36);
+
+    render_text(100, 150, "The quick brown fox", blue);
+    render_text(100, 100, "Hello World", red);
 
     SDL_UpdateWindowSurface(win);
     SDL_Delay(2000);
-	return 0;
+
+    return 0;
 }
