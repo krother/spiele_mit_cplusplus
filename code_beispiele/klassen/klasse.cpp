@@ -1,24 +1,45 @@
 // classes example
 #include <iostream>
+#include <string>
 using namespace std;
 
-class Rechteck {
-    int breite, hoehe;
-    public: void setze_werte(int, int);
-    int flaeche() {return breite*hoehe;}
+
+class Raumschiff {
+    string name;
+    int x, y;
+    public: 
+      void taufe(string);
+      void setze_position(int, int);
+      void ausgabe();
 };
 
-void Rechteck::setze_werte(int x, int y) {
-  breite = x;
-  hoehe = y;
+
+void Raumschiff::taufe(string n) {
+    name = n;
+}
+
+void Raumschiff::setze_position(int ax, int ay) {
+    x = ax;
+    y = ay;
+}
+
+void Raumschiff::ausgabe() {
+   cout << "Das Schiff " << name;
+   cout << " befindet sich bei (" << x << "/" << y << ")" << endl;
 }
 
 int main() {
-  Rechteck rect1, rect2;
-  rect1.setze_werte(3, 4);
-  rect2.setze_werte(5, 6);
-  cout << "flaeche: " << rect1.flaeche() << endl;
-  cout << "flaeche: " << rect2.flaeche() << endl;
+  Raumschiff schiff1;
+  Raumschiff schiff2;
+
+  schiff1.taufe("Nostromo");
+  schiff2.taufe("Excalibur");
+  schiff1.setze_position(0, 0);
+  schiff2.setze_position(17, 5);
+
+  schiff1.ausgabe();
+  schiff2.ausgabe();
+
   return 0;
 }
 
