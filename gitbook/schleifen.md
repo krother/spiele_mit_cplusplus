@@ -1,7 +1,24 @@
 
 # Schleifen
 
-Schleifen wiederholen Anweisungen. Es gibt drei Arten von Schleifen in C++.
+## Wozu benötigen wir Schleifen?
+
+![Dosenwerfen](dosenwerfen.jpg)
+
+*von Peng, 2008, Eigenes Werk, CC BY-SA 3.0. Wikimedia Commons*
+
+Stelle Dir eine Runde Dosenwerfen vor. Du wirst einen Ball und einige Dosen fallen um (oder auch nicht). Danach wirfst Du den nächsten Ball, bis alle Dosen abgeräumt oder die Bälle alle sind. Für uns als Programmierer sind dabei zwei Dinge interessant:
+
+1. Das Werfen des Balles wiederholt sich
+2. Wir wissen nicht im Voraus, wie viele Bälle geworfen werden.
+
+Allgemeiner können wir für das Dosenwerfen ein **Flußdiagramm** formulieren, das für sehr viele Spiele gültig ist:
+
+![Spielschleife](spielschleife.png)
+
+Um die Schleife im Flußdiagramm in C++ zu programmieren, benötigen wir die **Schleifenbefehle**.
+Es gibt drei Arten von Schleifen in C++:
+
 
 ## Bedingte Schleifen mit `do..while`
 
