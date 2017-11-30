@@ -7,9 +7,8 @@ Einen Himmel mit Millionen einzelner Sterne zu zeichnen würde viel zu lange dau
 
 ### Anforderungen
 
-* Ein Bild mit Sternen bewegt sich rechts nach links.
-* Eine Kopie des gleichen Bildes fährt direkt hinterher, damit es einen nahtlosen Übergang gibt.
-* Nach einiger Zeit beendet sich das Programm.
+* Ein Sternenhimmel bewegt sich von rechts nach links.
+* Nach einiger Zeit beendet sich das Programm von selbst.
 
 ### Materialien
 
@@ -17,6 +16,14 @@ Einen Himmel mit Millionen einzelner Sterne zu zeichnen würde viel zu lange dau
 * Bild mit Sternen `stars1.png`
 * `for`-Schleifen
 * Erste Schritte mit SDL (Positionieren von Bildern)
+
+### Hinweise
+
+* Lies nach, wie Du eine Grafik mit `SDL_BlitSurface` und `SDL_Rect` genau positionieren kannst.
+* Es macht nichts, wenn ein Bild halb außerhalb des Fensters liegt.
+* Der zweite Parameter von `SDL_BlitSurface` kann auf `NULL` bleiben, nur der vierte ist wichtig.
+* Stelle eine zweite Kopie des Sternbildes dar, damit keine Lücken entstehen (eine links, eine rechts)
+* Sobald ein Bild links herausgerollt ist, lasse es rechts ausserhalb des Bildschirms wieder hereinrollen.
 
 ### Für Fortgeschrittene
 

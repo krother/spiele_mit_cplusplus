@@ -10,20 +10,24 @@ using namespace std;
 
 class Tier {
 
+  private:
+    string name;
+    int beine;
+
   public: 
-      string name;
-      int beine;
-
-      Tier(string n, int b) {
-        name = n;
-        beine = b;
-      }
-      void ausgeben() {
-        cout << name << "(" << beine << " Beine)" << endl;
-      }
-
+    Tier(string, int b);
+    void ausgeben();
 };
 
+
+Tier::Tier(string n, int b) {
+    name = n;
+    beine = b;
+}
+
+void Tier::ausgeben() {
+    cout << name << "(" << beine << " Beine)" << endl;
+}
 
 int main() {
   Tier hund("Hund", 4);
@@ -32,7 +36,4 @@ int main() {
   biene.ausgeben();
   hund.ausgeben();
 }
-
-
-
 

@@ -60,6 +60,11 @@ Es folgt `lib/`:
 5. Drücke auf die Karte *'Linker settings'*
 6. Trage bei *'Other linker settings'* ein: `-lmingw32 -lSDL2main -lSDL2`
 
+#### Anmerkung: 
+Wenn Du auch noch **SDL_Image** installierst (im PNG-Bilder einzulesen), muss dort stehen:
+
+    -lmingw32 -lSDL2main -lSDL2 -lSDL2_image
+
 ## Schritt 7: Testen
 
 An dieser Stelle sollte das Programm bereits compilerbar sein, und eine `.exe`-Datei erzeugt werden.
