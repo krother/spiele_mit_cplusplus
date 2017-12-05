@@ -4,6 +4,7 @@
 * Offizielle C++-Webseite: [www.cplusplus.com/](http://www.cplusplus.com/)
 * C++ Programmierung, ein Einführungsbuch von Benjamin Buch (unter CC-Lizenz): [de.wikibooks.org/wiki/C%2B%2B-Programmierung/_Inhaltsverzeichnis](https://de.wikibooks.org/wiki/C%2B%2B-Programmierung/_Inhaltsverzeichnis)
 * C-Howto - eine Übersicht der C-Grundlagen: [c-howto.de](http://c-howto.de)
+* [Lernvideos auf Youtube](https://www.youtube.com/watch?v=CSVffOCNKKA&list=PL878117039FABC3A3)
 
 ----
 
