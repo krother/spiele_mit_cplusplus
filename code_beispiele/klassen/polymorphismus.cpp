@@ -25,15 +25,6 @@ class Tier {
 };
 
 
-class Hund: public Tier {
-  public: 
-      Hund(string n) : Tier(n, 4) {}
-
-      void bellen() {
-          cout << "Wuff" << endl;
-      }
-};
-
 class Biene: public Tier {
   public:
       bool honig;
@@ -55,11 +46,8 @@ class Biene: public Tier {
 
 
 int main() {
-  Hund rex("Rex");
   Biene maja(true);
 
-  rex.ausgeben();
-  rex.bellen();
   maja.ausgeben();
   maja.summen();
 
