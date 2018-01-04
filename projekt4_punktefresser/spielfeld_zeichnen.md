@@ -3,14 +3,14 @@
 
 ## Aufgabe 1
 
-Für das Spielfeld brauchen wir eine neue Art von Daten: **verschachtelte Arrays**. Im Programm `schachbrett.cpp` findest Du ein **verschachteltes Array** oder **zweidimensionales Array**.
+Für das Spielfeld brauchen wir eine Datenstruktur: **verschachtelte Arrays**. Im Programm [`array_2d.cpp`](https://github.com/krother/spiele_mit_cplusplus/blob/master/code_beispiele/datentypen/array_2d.cpp) findest Du ein **verschachteltes Array** oder **zweidimensionales Array**.
 
-Ergänze das Programm durch zwei `for`-Schleifen, so daß das gesamte Schachbrett im Textfenster ausgegeben wird.
+Ergänze das Programm durch zwei `for`-Schleifen, so dass das gesamte Schachbrett im Textfenster ausgegeben wird.
 
 
 ## Aufgabe 2
 
-Nun kümmern wir uns um das grafische Spielfeld. Wir werden das Spielfeld in einem zweidimensionalen Array ablegen. 
+Nun kümmern wir uns um das grafische Spielfeld. Wir werden das Spielfeld in einem zweidimensionalen Array ablegen.
 Verknüpfe das verschachtelte Array aus dem vorigen Programm mit der Grafikbibliothek SDL, so daß das *"Schachbrett"* mit Kachel-Grafik in einem Grafikfenster gezeichnet wird.
 
 Der Einfachheit halber stellen wir jedes Spielelement als ein Zeichen dar. Hier verwenden wir folgende Legende:
@@ -24,16 +24,17 @@ Der Einfachheit halber stellen wir jedes Spielelement als ein Zeichen dar. Hier 
 
 Der Programmcode für das Array sieht folendermaßen aus:
 
-	char spielfeld[8][8] = {
-		{'#', '#', '#', '#', '#', '#', '#', '#'},
-		{'#', 'b', '_', '_', '_', '_', 'b', '#'},
-		{'#', '_', '#', '#', '_', '#', '_', '#'},
-		{'#', '_', '_', '_', '_', '#', '_', '#'},
-		{'#', '_', '#', '_', '_', '_', '_', '#'},
-		{'#', '_', '#', '_', '#', '#', '_', '#'},
-		{'#', 'b', '_', '_', '_', '_', 'b', '#'},
-		{'#', '#', '#', '#', '*', '#', '#', '#'}
-	};
+    char spielfeld[8][8] = {
+      {'#', '#', '#', '#', '#', '#', '#', '#'},
+      {'#', 'b', '_', '_', '_', '_', 'b', '#'},
+      {'#', '_', '#', '#', '_', '#', '_', '#'},
+      {'#', '_', '_', '_', '_', '#', '_', '#'},
+      {'#', '_', '#', '_', '_', '_', '_', '#'},
+      {'#', '_', '#', '_', '#', '#', '_', '#'},
+      {'#', 'b', '_', '_', '_', '_', 'b', '#'},
+      {'#', '#', '#', '#', '*', '#', '#', '#'}
+    };
+
 
 Füge den Programmcode ein und compiliere das Programm erneut. Es ist immer keine Veränderung zu sehen.
 
@@ -68,7 +69,7 @@ Je nachdem welchen Wert `kachel` hat, müssen wir die Werte im Rechteck `source`
 
 Erweitere diese Folge durch Code für die anderen Kacheln.
 
-**Stelle sicher, daß der Aufruf von `SDL_BlitSurface` nach der `if..else` Konstruktion erfolgt.
+**Stelle sicher, daß der Aufruf von `SDL_BlitSurface` nach der `if..else` Konstruktion erfolgt.**
 
 Compiliere das Programm und stelle sicher daß es funktioniert.
 
@@ -110,8 +111,8 @@ Da das Programm nicht weiß wann es aufhören soll, müssen wir eine Abbruchbedi
 
     while (!ende) {
 
-      if ( SDL_PollEvent( &e ) != 0 ) { 
-        if( e.type == SDL_KEYDOWN ) { 
+      if ( SDL_PollEvent( &e ) != 0 ) {
+        if( e.type == SDL_KEYDOWN ) {
 
         	ende = true;
 
@@ -129,12 +130,12 @@ Compiliere das Programm und führe es aus.
 
 ## Aufgabe 6
 
-Mit den Events in SDL können wir einzelne Tasten unterscheiden. Jede Taste hat eine Zahl, z.B. die Leertaste ist Nr. 32. Für die Pfeiltasten gibt es Abkürzungen, z.B. `SDLK_UP`. Wir werden nun das Programm so verändern, daß sich bei den Pfeilen die Position der Spielfigur ändert, und die Leertaste das Spiel beendet. 
+Mit den Events in SDL können wir einzelne Tasten unterscheiden. Jede Taste hat eine Zahl, z.B. die Leertaste ist Nr. 32. Für die Pfeiltasten gibt es Abkürzungen, z.B. `SDLK_UP`. Wir werden nun das Programm so verändern, daß sich bei den Pfeilen die Position der Spielfigur ändert, und die Leertaste das Spiel beendet.
 
 Schreibe:
 
     ..
-    if( e.type == SDL_KEYDOWN ) { 
+    if( e.type == SDL_KEYDOWN ) {
         int taste = e.key.keysym.sym;
         if (taste == 32) {
         	ende = true;

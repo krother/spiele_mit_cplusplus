@@ -11,9 +11,9 @@ In diesem Projekt können wir alles bisher erlernte zusammenbringen.
 
 | Nr. | Name           | Thema  | Farbe |
 |-----|----------------|--------|-------|
-| 4.1 | Ein Spielfeld zeichnen | 2D-Arrays | orange |
-| 4.2 | Die Spielfigur | Klassen | grün |
-| 4.3 | Früchte | Text | blau |
-| 4.4 | Editor | Laden/Speichern  | braun |
-| 4.5 | Geister | Threads | schwarz |
-
+| 4.1 | Features planen | User Stories | gelb |
+| 4.2 | Das Spielfeld zeichnen | 2D-Arrays | orange |
+| 4.3 | Ein Datenmodell entwickeln | UML | grün |
+| 4.4 | Professionelle Entwicklungswerkzeuge | Klassen | grün |
+| 4.5 | Programmstruktur | Header-Dateien | blau |
+| 4.6 | Das Programm ausliefern | Laden/Speichern  | schwarz |
