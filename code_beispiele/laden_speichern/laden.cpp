@@ -21,14 +21,14 @@ int main() {
 	string spieler;
 	string punktezeile;
 	while (eingabe.good()) {
-		
+
         getline(eingabe, spieler);
         if (spieler[0] == '#') {
             break;
         }
 	    getline(eingabe, punktezeile);
-	    auto punkte = stoul(punktezeile);
-	    cout << spieler << " : " << punkte << endl;
+	    int punkte = stoul(punktezeile);
+			cout << spieler << " : " << punkte << endl;
 
 	}
 
