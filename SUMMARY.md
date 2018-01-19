@@ -34,7 +34,7 @@
   * [Ein Projekt in Code::Blocks anlegen](gitbook/code_blocks.md)
   * [SDL unter Code::Blocks installieren](gitbook/SDL_installieren.md)
   * [Probleme beim Compilieren](gitbook/compilieren.md)
-  * [Die Kommandozeile](gitbook/compilieren_kommandozeile.md)
+  * [Die Kommandozeile](gitbook/kommandozeile.md)
   * [Compilieren auf der Kommandozeile](gitbook/compilieren_kommandozeile.md)
   * [Pseudocode](gitbook/pseudocode.md)
 * [C++ Grundlagen]
