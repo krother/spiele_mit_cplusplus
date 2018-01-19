@@ -3,9 +3,13 @@
 
 Wir können ein C++-Programm auch ohne Code::Blocks compilieren. Wir rufen dazu den Compiler direkt von der **Kommandozeile** aus.
 
-## Pfad auf MinGW setzen (einmalig)
+## Ist der C++-Compiler ausführbar?
 
-Damit Du den Compiler `g++` auf  überall her starten können, musst Du die sogenannte **Pfadvariable** setzen. Windows sucht nach zu startenden Programmen in den im Pfad angegebenen Verzeichnissen. Und so geht es (*unter Windows 10 ist es vermutlich schon wieder anders :-(*):
+Öffne eine Windows-Konsole (führe das Programm `cmd` aus). Tippe ohne das Verzeichnis zu wechseln `g++` ein. Wenn die Fehlermeldung (*`fatal error`*) erscheint, hat alles funktioniert.
+
+## Wenn es nicht funktioniert: Pfad auf MinGW setzen
+
+Damit Du den Compiler `g++` auf  überall her starten können, musst Du *einmalig*  eine sogenannte **Pfadvariable** setzen. Windows sucht nach zu startenden Programmen in den im Pfad angegebenen Verzeichnissen. Und so geht es (*unter Windows 10 ist es vermutlich schon wieder anders :-(*):
 
 1. Öffne die *Systemsteuerung*
 2. Öffne dort die Kategorie *System*
@@ -16,41 +20,31 @@ Damit Du den Compiler `g++` auf  überall her starten können, musst Du die soge
 
 ![Pfadvariable](bilder_installation/environment_vars.png)
 
-#### Überprüfung
-
-Öffne eine Windows-Konsole (führe das Programm `cmd` aus). Tippe ohne das Verzeichnis zu wechseln `g++` ein. Wenn die gleiche Fehlermeldung (*`fatal error`*) wie oben erscheint, hat es funktioniert. 
-
 
 ## Compilieren unter Windows
 
-1. Finde den Quelltext eines funktionierenden C++-Programms, z.B. `hello.cpp`.
+1. Erstelle mit einem Texteditor ein kleines C++-Programm, z.B. `hello.cpp`.
 
 2. Klicke im Dateimanager in die Adreßzeile. Merke oder kopiere Dir den dort sichtbaren **Pfad**.
 
-2. Öffne eine Windows-Konsole, indem Du im Startmenü den Befehl `cmd` eingibst. Es öffnet sich eine schwarze Textkonsole.
+2. Öffne eine Windows-Kommandozeile.
 
-3. Gib den Befehl `dir` ein. Du solltest eine Liste von Dateien und Verzeichnissen sehen.
+3. Wechsle in das Verzeichnis mit Deinem Programm.
 
-4. Nun werden wir in das Verzeichnis mit Deinem C++-Quelltext wechseln. Gib zuerst `C:` oder `D:` ein, je nachdem womit der Pfad zur Datei beginnt.
-
-5. Mit `cd <verzeichnisname>` kannst Du in der Konsole das Verzeichnis wechseln. Mit `cd ..` wechselst Du in die nächsthöhere Ebene. Verwende `dir` und `cd`, um in Deine C++-Datei zu finden.
-
-6. Rufe den Compiler auf, indem Du eingibst:
+4. Rufe den Compiler auf:
 
     g++ hallo.cpp -o hallo.exe
 
-Der Schalter `-o` sagt dem Compiler, dass die Ausgabe in die Datei `hallo.exe` geschrieben werden soll.
+Die Option `-o` sagt dem Compiler, dass die Ausgabe in die Datei `hallo.exe` geschrieben werden soll.
 
-7. Welche Datei ist entstanden?
-
-8. Rufe die Datei auf, indem Du in der Konsole `dateiname.exe` eingibst. 
+5. Rufe das compilierte Programm auf, indem Du in der Konsole `hallo.exe` eingibst.
 
 
 ## Compilieren unter Linux und Mac
 
 Grundsätzlich funktioniert das Kompilieren genauso, außer daß:
 
-1. Suche nach **Terminal** um eine Konsole zu öffnen
+1. Suche nach **Terminal** um eine Kommandozeile zu öffnen
 2. Es gibt beim `cd`-Befehl keine Verzeichnisse mit `C:` usw.
 3. Der Befehl `dir` heißt `ls`
 4. Um ein compiliertes Programm auszuführen mußt Du eingeben z.B.:

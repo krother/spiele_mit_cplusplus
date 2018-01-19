@@ -34,6 +34,7 @@
   * [Ein Projekt in Code::Blocks anlegen](gitbook/code_blocks.md)
   * [SDL unter Code::Blocks installieren](gitbook/SDL_installieren.md)
   * [Probleme beim Compilieren](gitbook/compilieren.md)
+  * [Die Kommandozeile](gitbook/compilieren_kommandozeile.md)
   * [Compilieren auf der Kommandozeile](gitbook/compilieren_kommandozeile.md)
   * [Pseudocode](gitbook/pseudocode.md)
 * [C++ Grundlagen]
@@ -49,6 +50,7 @@
   * [Schleifen](gitbook/schleifen.md)
   * [Funktionen](gitbook/funktionen.md)
   * [Zufallszahlen](gitbook/zufallszahlen.md)
+  * [Codebeispiele](gitbook/codebeispiele.md)
 * [Die Grafikbibliothek SDL](gitbook/sdl/README.md)
   * [Übersicht aller SDL-Funktionen](gitbook/sdl/uebersicht.md)
   * [Fenster erzeugen](gitbook/sdl/fenster.md)
