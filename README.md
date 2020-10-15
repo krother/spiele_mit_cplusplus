@@ -18,7 +18,7 @@ In diesem Kurs lernst Du die Grundlagen von C++, indem Du kleine Computerspiele 
 
 ## Quellen
 
-Weitere Tutorials sind unter [https://www.gitbook.com/@krother](https://www.gitbook.com/@krother) frei verfügbar.
+Weitere Programmieraufgaben sind auf [www.academis.eu](https://www.academis.eu) frei verfügbar.
 
 ----
 
