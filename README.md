@@ -18,8 +18,6 @@ In diesem Kurs lernst Du die Grundlagen von C++, indem Du kleine Computerspiele 
 
 ## Quellen
 
-Dieses Online-Tutorial ist auf [Gitbook](https://www.gitbook.com/book/krother/objektorientierte-programmierung-mit-c/details) veröffentlicht.
-
 Weitere Tutorials sind unter [https://www.gitbook.com/@krother](https://www.gitbook.com/@krother) frei verfügbar.
 
 ----
